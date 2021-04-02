@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="tests-of"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/studia 2k19/projekty/tests-of-heap-array-and-list/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/CPP/MinGW/bin/mingw32-make.exe -f &quot;C:/studia 2k19/projekty/tests-of-heap-array-and-list/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/CPP/MinGW/bin/mingw32-make.exe -f &quot;C:/studia 2k19/projekty/tests-of-heap-array-and-list/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/CPP/MinGW/bin/mingw32-make.exe -f &quot;C:/studia 2k19/projekty/tests-of-heap-array-and-list/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/CPP/MinGW/bin/mingw32-make.exe -f &quot;C:/studia 2k19/projekty/tests-of-heap-array-and-list/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="nowy">
+				<Option output="C:/studia 2k19/projekty/tests-of-heap-array-and-list/cmake-build-debug/nowy.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/studia 2k19/projekty/tests-of-heap-array-and-list/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\cpp\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++"/>
+					<Add directory="c:\cpp\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/mingw32"/>
+					<Add directory="c:\cpp\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/backward"/>
+					<Add directory="c:\cpp\mingw\bin\../lib/gcc/mingw32/8.2.0/include"/>
+					<Add directory="c:\cpp\mingw\bin\../lib/gcc/mingw32/8.2.0/../../../../include"/>
+					<Add directory="c:\cpp\mingw\bin\../lib/gcc/mingw32/8.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/CPP/MinGW/bin/mingw32-make.exe -f &quot;C:/studia 2k19/projekty/tests-of-heap-array-and-list/cmake-build-debug/Makefile&quot;  VERBOSE=1 nowy"/>
+					<CompileFile command="C:/CPP/MinGW/bin/mingw32-make.exe -f &quot;C:/studia 2k19/projekty/tests-of-heap-array-and-list/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/CPP/MinGW/bin/mingw32-make.exe -f &quot;C:/studia 2k19/projekty/tests-of-heap-array-and-list/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/CPP/MinGW/bin/mingw32-make.exe -f &quot;C:/studia 2k19/projekty/tests-of-heap-array-and-list/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="nowy/fast">
+				<Option output="C:/studia 2k19/projekty/tests-of-heap-array-and-list/cmake-build-debug/nowy.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/studia 2k19/projekty/tests-of-heap-array-and-list/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\cpp\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++"/>
+					<Add directory="c:\cpp\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/mingw32"/>
+					<Add directory="c:\cpp\mingw\bin\../lib/gcc/mingw32/8.2.0/include/c++/backward"/>
+					<Add directory="c:\cpp\mingw\bin\../lib/gcc/mingw32/8.2.0/include"/>
+					<Add directory="c:\cpp\mingw\bin\../lib/gcc/mingw32/8.2.0/../../../../include"/>
+					<Add directory="c:\cpp\mingw\bin\../lib/gcc/mingw32/8.2.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/CPP/MinGW/bin/mingw32-make.exe -f &quot;C:/studia 2k19/projekty/tests-of-heap-array-and-list/cmake-build-debug/Makefile&quot;  VERBOSE=1 nowy/fast"/>
+					<CompileFile command="C:/CPP/MinGW/bin/mingw32-make.exe -f &quot;C:/studia 2k19/projekty/tests-of-heap-array-and-list/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/CPP/MinGW/bin/mingw32-make.exe -f &quot;C:/studia 2k19/projekty/tests-of-heap-array-and-list/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/CPP/MinGW/bin/mingw32-make.exe -f &quot;C:/studia 2k19/projekty/tests-of-heap-array-and-list/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/studia 2k19/projekty/tests-of-heap-array-and-list/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/CPP/MinGW/bin/mingw32-make.exe -f &quot;C:/studia 2k19/projekty/tests-of-heap-array-and-list/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/CPP/MinGW/bin/mingw32-make.exe -f &quot;C:/studia 2k19/projekty/tests-of-heap-array-and-list/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/CPP/MinGW/bin/mingw32-make.exe -f &quot;C:/studia 2k19/projekty/tests-of-heap-array-and-list/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/CPP/MinGW/bin/mingw32-make.exe -f &quot;C:/studia 2k19/projekty/tests-of-heap-array-and-list/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/studia 2k19/projekty/tests-of-heap-array-and-list/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/CPP/MinGW/bin/mingw32-make.exe -f &quot;C:/studia 2k19/projekty/tests-of-heap-array-and-list/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/CPP/MinGW/bin/mingw32-make.exe -f &quot;C:/studia 2k19/projekty/tests-of-heap-array-and-list/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/CPP/MinGW/bin/mingw32-make.exe -f &quot;C:/studia 2k19/projekty/tests-of-heap-array-and-list/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/CPP/MinGW/bin/mingw32-make.exe -f &quot;C:/studia 2k19/projekty/tests-of-heap-array-and-list/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/studia 2k19/projekty/tests-of-heap-array-and-list/BstTree.cpp">
+			<Option target="nowy"/>
+		</Unit>
+		<Unit filename="C:/studia 2k19/projekty/tests-of-heap-array-and-list/BstTree.h">
+			<Option target="nowy"/>
+		</Unit>
+		<Unit filename="C:/studia 2k19/projekty/tests-of-heap-array-and-list/DynamicArray.cpp">
+			<Option target="nowy"/>
+		</Unit>
+		<Unit filename="C:/studia 2k19/projekty/tests-of-heap-array-and-list/DynamicArray.h">
+			<Option target="nowy"/>
+		</Unit>
+		<Unit filename="C:/studia 2k19/projekty/tests-of-heap-array-and-list/List.cpp">
+			<Option target="nowy"/>
+		</Unit>
+		<Unit filename="C:/studia 2k19/projekty/tests-of-heap-array-and-list/List.h">
+			<Option target="nowy"/>
+		</Unit>
+		<Unit filename="C:/studia 2k19/projekty/tests-of-heap-array-and-list/TimeTests.cpp">
+			<Option target="nowy"/>
+		</Unit>
+		<Unit filename="C:/studia 2k19/projekty/tests-of-heap-array-and-list/TimeTests.h">
+			<Option target="nowy"/>
+		</Unit>
+		<Unit filename="C:/studia 2k19/projekty/tests-of-heap-array-and-list/bin_heap.cpp">
+			<Option target="nowy"/>
+		</Unit>
+		<Unit filename="C:/studia 2k19/projekty/tests-of-heap-array-and-list/bin_heap.h">
+			<Option target="nowy"/>
+		</Unit>
+		<Unit filename="C:/studia 2k19/projekty/tests-of-heap-array-and-list/main.cpp">
+			<Option target="nowy"/>
+		</Unit>
+		<Unit filename="C:/studia 2k19/projekty/tests-of-heap-array-and-list/stopWatch.cpp">
+			<Option target="nowy"/>
+		</Unit>
+		<Unit filename="C:/studia 2k19/projekty/tests-of-heap-array-and-list/stopWatch.h">
+			<Option target="nowy"/>
+		</Unit>
+		<Unit filename="C:/studia 2k19/projekty/tests-of-heap-array-and-list/structureTests.cpp">
+			<Option target="nowy"/>
+		</Unit>
+		<Unit filename="C:/studia 2k19/projekty/tests-of-heap-array-and-list/structureTests.h">
+			<Option target="nowy"/>
+		</Unit>
+		<Unit filename="C:/studia 2k19/projekty/tests-of-heap-array-and-list/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
