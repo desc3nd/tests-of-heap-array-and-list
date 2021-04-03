@@ -1,0 +1,3 @@
+/home/marcinek/Pulpit/tests-of-heap-array-and-list/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/marcinek/Pulpit/tests-of-heap-array-and-list/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/marcinek/Pulpit/tests-of-heap-array-and-list/cmake-build-debug/CMakeFiles/nowy.dir

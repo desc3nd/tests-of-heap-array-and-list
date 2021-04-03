@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/marcinek/Pulpit/tests-of-heap-array-and-list/List.cpp
+List.h
+/home/marcinek/Pulpit/tests-of-heap-array-and-list/List.h
+cstdlib
+-
+iostream
+-
+string
+-
+fstream
+-
+cctype
+-
+
+/home/marcinek/Pulpit/tests-of-heap-array-and-list/List.h
+string
+-
+
