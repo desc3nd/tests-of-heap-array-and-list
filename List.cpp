@@ -6,26 +6,21 @@
 #include <fstream>
 #include <cctype>
 List::List() {
-head=(Element *)malloc(sizeof(Element));
-tail=(Element *)malloc(sizeof(Element));
-head->elementData=0;
-head->nextElement=nullptr;
-head->previousElement=nullptr;
-tail->nextElement=nullptr;
-tail->previousElement=nullptr;
-tail=nullptr;
-head=nullptr;
+
+head= nullptr;
+tail= nullptr;
+
 iter=0;
 size=0;
 }
 List::~List()
 {
-    while (head != tail) {
-        head = head->nextElement;
-        free(head->previousElement);
+    Element *current;
+    for (int i=0; i<size; i++) {
+        current = head->nextElement;
+        free(head);
+        head=current;
     }
-
-    delete tail;
 }
 void List::push(int data) {
     size++;
@@ -43,7 +38,6 @@ void List::push(int data) {
     }
     else
     {
-
         current->elementData=data;
         current->nextElement=head;
         current->previousElement=nullptr;
@@ -55,24 +49,25 @@ void List::push(int data) {
         }
 
     }
-
-
 }
 
 void List::pushBack(int data) {
     size++;
-    Element *current;
-    current=(Element *)malloc(sizeof(Element));
+
     if (head==nullptr)
-    {
+    {   Element *current;
+        current=(Element *)malloc(sizeof(Element));
         head=current;
         tail=current;
         head->elementData=data;
         head->previousElement=nullptr;
         head->nextElement=nullptr;
+
     }
     else
     {
+        Element *current;
+        current=(Element *)malloc(sizeof(Element));
         current->elementData=data;
         current->previousElement=tail;
         current->nextElement=nullptr;
@@ -149,6 +144,8 @@ void List::popBack() {
         if(tail->previousElement == nullptr)
         {
             tail = nullptr;
+            free(tail);
+            free(head);
         }
         else
         {
@@ -295,11 +292,16 @@ void List::popByIdx(int index) {
         std::cerr<<" popByIx: the list is empty.";
         return;
     }
+    if(index == 0)
+    {
+        pop();
+        return;
+    }
     else if(index == size-1 and size != 0)
         popBack();
     else if(index <= size/2)
     {
-        size--;
+
         current=head;
         int counter = 0;
         while(counter<index-1)
@@ -312,14 +314,13 @@ void List::popByIdx(int index) {
         current->nextElement = ptr->nextElement;
         current->nextElement->previousElement=current;
         free(ptr);
-
+        size--;
     }
     else if (index >size/2 && index < size)
     {
-        size--;
         current=tail;
         int counter = size-1;
-        while(counter>index+1)
+        while(counter>index-1)
         {
             current=current->previousElement;
             counter--;
@@ -329,6 +330,7 @@ void List::popByIdx(int index) {
         current->nextElement = ptr->nextElement;
         current->nextElement->previousElement=current;
         free(ptr);
+        size--;
     }
 }
 

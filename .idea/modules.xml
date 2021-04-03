@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../ProjectOne/.idea/nowy.iml" filepath="$PROJECT_DIR$/../ProjectOne/.idea/nowy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/tests-of-heap-array-and-list.iml" filepath="$PROJECT_DIR$/.idea/tests-of-heap-array-and-list.iml" />
     </modules>
   </component>
 </project>

@@ -62,7 +62,8 @@ void TimeTests::TestList(std::string structure) {
             List list;
             int count=0;
             list.readFromFile("txtToCheck.txt","pushBack");
-            while(count == list.returnSize())
+            int size=list.returnSize();
+            while(count != size)
             {
                 time.startCountingTime();
                 list.pushIx(rand()%(list.returnSize()),rand()%1000);
@@ -77,9 +78,13 @@ void TimeTests::TestList(std::string structure) {
             list.readFromFile("txtToCheck.txt","pushBack");
             while(list.returnSize() != 0 )
             {
+                int toDelete=rand()%list.returnSize();
+                std::cout<<toDelete<<std::endl;
+                std::cout<<"to "<<list.returnSize()<<std::endl;
                 time.startCountingTime();
-                list.popByIdx(rand()%list.returnSize());
+                list.popByIdx(toDelete);
                 time.stopCountingTime();
+                list.showList();
                 std::cout<<"time : "<< time.elapsedTime()<<std::endl;
             }
         }

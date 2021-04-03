@@ -116,7 +116,11 @@ void DynamicArray::popFront() {
 }
 
 DynamicArray::~DynamicArray() {
+    if(head != nullptr)
+    {
         delete [] head;
+    }
+
 }
 
 int DynamicArray::printByIdx(int idx) {

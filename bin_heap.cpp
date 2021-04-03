@@ -16,7 +16,7 @@ void  bin_heap::push(int data) {
         newRoot[i]=root[i];
     }
     newRoot[size]=data;
-    delete root;
+    delete [] root;
     root=newRoot;
     fixHeap();
     size++;
