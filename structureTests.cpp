@@ -28,7 +28,7 @@ void structureTests::propList() {
 
 void structureTests::propDynamicArray() {
     DynamicArray Array;
-    Array.readFromFile("txtToCheck.txt");
+    Array.readFromFile("txtToCheck.txt","push");
     for (int i = 0; i < 10; i++)
     {
         Array.pushBack(rand() % 1000);

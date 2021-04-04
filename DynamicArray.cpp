@@ -134,7 +134,7 @@ int DynamicArray::printByIdx(int idx) {
 
 }
 
-void DynamicArray::readFromFile(const std::string &filename) {
+void DynamicArray::readFromFile(const std::string &filename, const std::string& operation) {
     std::ifstream read;
     read.open(filename);
     if (!read.good())
@@ -147,10 +147,17 @@ void DynamicArray::readFromFile(const std::string &filename) {
     {
         if(!isblank(var))
         {
-            pushBack(var);
+            if(operation=="pushBack" or operation=="fill")
+                pushBack(var);
+            else if (operation=="push")
+                pushFront(var);
         }
     }
     read.close();
 
+}
+
+int DynamicArray::returnSize() {
+    return size;
 }
 

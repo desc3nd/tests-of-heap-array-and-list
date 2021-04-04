@@ -16,6 +16,7 @@ public:
     void displayHeap();
     void pop();
     void readFromFile(const std::string& filename);
+    int returnSize();
 
 private:
     void fixHeap();

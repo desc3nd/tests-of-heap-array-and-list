@@ -17,8 +17,8 @@ public:
     void popBack();
     void popFront();
     int printByIdx(int idx);
-    void readFromFile(const std::string& filename);
-
+    void readFromFile(const std::string& filename, const std::string &operation);
+    int returnSize();
 
 private:
     int size;

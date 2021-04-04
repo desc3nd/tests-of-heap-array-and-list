@@ -11,7 +11,10 @@
 class TimeTests {
 public:
    explicit TimeTests();
-   void TestList(std::string structure);
+   void TestList();
+   void TestDynamicArray();
+   void TestBinHeap();
+
 
 private:
    void operationMenu();

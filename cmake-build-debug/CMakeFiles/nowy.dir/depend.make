@@ -27,8 +27,17 @@ CMakeFiles/nowy.dir/main.cpp.o: ../List.h
 CMakeFiles/nowy.dir/main.cpp.o: ../TimeTests.h
 CMakeFiles/nowy.dir/main.cpp.o: ../bin_heap.h
 CMakeFiles/nowy.dir/main.cpp.o: ../main.cpp
+CMakeFiles/nowy.dir/main.cpp.o: ../menu.h
 CMakeFiles/nowy.dir/main.cpp.o: ../stopWatch.h
 CMakeFiles/nowy.dir/main.cpp.o: ../structureTests.h
+
+CMakeFiles/nowy.dir/menu.cpp.o: ../DynamicArray.h
+CMakeFiles/nowy.dir/menu.cpp.o: ../List.h
+CMakeFiles/nowy.dir/menu.cpp.o: ../TimeTests.h
+CMakeFiles/nowy.dir/menu.cpp.o: ../bin_heap.h
+CMakeFiles/nowy.dir/menu.cpp.o: ../menu.cpp
+CMakeFiles/nowy.dir/menu.cpp.o: ../menu.h
+CMakeFiles/nowy.dir/menu.cpp.o: ../stopWatch.h
 
 CMakeFiles/nowy.dir/stopWatch.cpp.o: ../stopWatch.cpp
 CMakeFiles/nowy.dir/stopWatch.cpp.o: ../stopWatch.h

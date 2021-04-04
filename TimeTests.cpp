@@ -5,7 +5,7 @@
 #include <iostream>
 #include "TimeTests.h"
 
-void TimeTests::TestList(std::string structure) {
+void TimeTests::TestList() {
     int action=0;
     stopWatch time;
 
@@ -124,8 +124,157 @@ void TimeTests::operationMenu() {
     std::cout << "6.Delete:" << std::endl;
     std::cout << "7.Print element:" << std::endl;
     std::cout << "8.Print Structure:" << std::endl;
-    std::cout << "-1.Quit" << std::endl;
+    std::cout << "-1.Return to main menu" << std::endl;
 
 
 
+}
+
+void TimeTests::TestDynamicArray() {
+    int action=0;
+    stopWatch time;
+    while(action!=-1)
+    {
+        operationMenu();
+        std::cin>>action;
+
+        if(action  == -1 )
+            return;
+        else if (action == 1)
+        {
+            DynamicArray array;
+            time.startCountingTime();
+            array.readFromFile("txtToCheck.txt","push");
+            time.stopCountingTime();
+            std::cout<<"time : "<< time.elapsedTime()<<std::endl;
+
+        }
+        else if (action == 2)
+        {
+            DynamicArray array;
+            array.readFromFile("txtToCheck.txt","pushBack");
+            while(array.returnSize() != 0)
+            {
+                time.startCountingTime();
+                array.popBack();
+                time.stopCountingTime();
+                std::cout<<"time : "<< time.elapsedTime()<<std::endl;
+            }
+        }
+        else if (action == 3)
+        {
+            DynamicArray array;
+            time.startCountingTime();
+            array.readFromFile("txtToCheck.txt","pushBack");
+            time.stopCountingTime();
+            std::cout<<"time : "<< time.elapsedTime()<<std::endl;
+        }
+        else if (action == 4)
+        {
+            DynamicArray array;
+            array.readFromFile("txtToCheck.txt","pushBack");
+            while(array.returnSize() > 0)
+            {
+                time.startCountingTime();
+                array.popBack();
+                time.stopCountingTime();
+                std::cout<<"time : "<< time.elapsedTime()<<std::endl;
+            }
+        }
+        else if (action == 5)
+        {
+            DynamicArray array;
+            int count=0;
+            array.readFromFile("txtToCheck.txt","pushBack");
+            int size=array.returnSize();
+            while(count != size)
+            {
+                time.startCountingTime();
+                array.pushByIdx(rand()%(array.returnSize()),rand()%1000);
+                time.stopCountingTime();
+                std::cout<<"time : "<< time.elapsedTime()<<std::endl;
+                count++;
+            }
+        }
+        else if (action == 6)
+        {
+            DynamicArray array;
+            array.readFromFile("txtToCheck.txt","pushBack");
+            while(array.returnSize() != 0 )
+            {
+                int toDelete=rand()%array.returnSize();
+                std::cout<<toDelete<<std::endl;
+                std::cout<<"to "<<array.returnSize()<<std::endl;
+                time.startCountingTime();
+                array.popByIdx(toDelete);
+                time.stopCountingTime();
+                array.arrayDisplay();
+                std::cout<<"time : "<< time.elapsedTime()<<std::endl;
+            }
+        }
+        else if (action == 7)
+        {
+            DynamicArray array;
+            array.readFromFile("txtToCheck.txt","pushBack");
+            time.startCountingTime();
+            array.arrayDisplay();
+            time.stopCountingTime();
+            std::cout<<"time : "<< time.elapsedTime()<<std::endl;
+        }
+        else if (action == 8)
+        {
+            DynamicArray array;
+            array.readFromFile("txtToCheck.txt","pushBack");
+            time.startCountingTime();
+            array.printByIdx(rand()%array.returnSize());
+            time.stopCountingTime();
+            std::cout<<"time : "<< time.elapsedTime()<<std::endl;
+        }
+    }
+
+
+}
+
+void TimeTests::TestBinHeap() {
+
+    int action = 0;
+    stopWatch time;
+    while (action != -1) {
+        std::cout << "Choose what operation you want to test: " << std::endl;
+        std::cout << "1.Push" << std::endl;
+        std::cout << "2.Pop" << std::endl;
+        std::cout << "3.Print Structure:" << std::endl;
+        std::cout << "-1.Return to main menu" << std::endl;
+        std::cin >> action;
+        if (action == -1)
+        {
+            return;
+        }
+        else if (action == 1)
+        {
+            bin_heap heap;
+            time.startCountingTime();
+            heap.readFromFile("txtToCheck.txt");
+            time.stopCountingTime();
+            std::cout << "time : " << time.elapsedTime() << std::endl;
+        }
+        else if (action == 2) {
+            bin_heap heap;
+            heap.readFromFile("txtToCheck.txt");
+            while (heap.returnSize() != 0) {
+                time.startCountingTime();
+                heap.pop();
+                time.stopCountingTime();
+                std::cout << "time : " << time.elapsedTime() << std::endl;
+            }
+        }
+        else if (action == 3) {
+            bin_heap heap;
+            heap.readFromFile("txtToCheck.txt");
+            time.startCountingTime();
+            heap.displayHeap();
+            time.stopCountingTime();
+            std::cout << "time : " << time.elapsedTime() << std::endl;
+        }
+    }
 }

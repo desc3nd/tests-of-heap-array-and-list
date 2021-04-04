@@ -121,11 +121,15 @@ void bin_heap::readFromFile(const std::string &filename)
     {
         if(!isblank(var))
         {
-            push(var);
+                push(var);
         }
     }
     read.close();
 
 
+}
+
+int bin_heap::returnSize() {
+    return size;
 }
 
