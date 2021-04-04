@@ -6,45 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/marcinek/Pulpit/tests-of-heap-array-and-list/DynamicArray.h
-string
--
-
-/home/marcinek/Pulpit/tests-of-heap-array-and-list/List.h
-string
--
-
-/home/marcinek/Pulpit/tests-of-heap-array-and-list/TimeTests.cpp
-iostream
--
-TimeTests.h
-/home/marcinek/Pulpit/tests-of-heap-array-and-list/TimeTests.h
-
-/home/marcinek/Pulpit/tests-of-heap-array-and-list/TimeTests.h
+/home/marcinek/Pulpit/tests-of-heap-array-and-list/List.cpp
 List.h
 /home/marcinek/Pulpit/tests-of-heap-array-and-list/List.h
-stopWatch.h
-/home/marcinek/Pulpit/tests-of-heap-array-and-list/stopWatch.h
-DynamicArray.h
-/home/marcinek/Pulpit/tests-of-heap-array-and-list/DynamicArray.h
-bin_heap.h
-/home/marcinek/Pulpit/tests-of-heap-array-and-list/bin_heap.h
-
-/home/marcinek/Pulpit/tests-of-heap-array-and-list/bin_heap.h
-DynamicArray.h
-/home/marcinek/Pulpit/tests-of-heap-array-and-list/DynamicArray.h
-
-/home/marcinek/Pulpit/tests-of-heap-array-and-list/menu.cpp
+cstdlib
+-
 iostream
 -
-menu.h
-/home/marcinek/Pulpit/tests-of-heap-array-and-list/menu.h
-TimeTests.h
-/home/marcinek/Pulpit/tests-of-heap-array-and-list/TimeTests.h
+string
+-
+fstream
+-
+cctype
+-
 
-/home/marcinek/Pulpit/tests-of-heap-array-and-list/menu.h
-
-/home/marcinek/Pulpit/tests-of-heap-array-and-list/stopWatch.h
-chrono
+/home/marcinek/Pulpit/tests-of-heap-array-and-list/List.h
+string
 -
 
