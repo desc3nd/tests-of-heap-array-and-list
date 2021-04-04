@@ -6,21 +6,22 @@
 #include <fstream>
 #include <cctype>
 List::List() {
-
 head= nullptr;
 tail= nullptr;
-
 iter=0;
 size=0;
 }
 List::~List()
 {
     Element *current;
+
     for (int i=0; i<size; i++) {
         current = head->nextElement;
         free(head);
         head=current;
     }
+
+
 }
 void List::push(int data) {
     size++;
@@ -52,9 +53,8 @@ void List::push(int data) {
 }
 
 void List::pushBack(int data) {
-    size++;
 
-    if (head==nullptr)
+    if (size == 0)
     {   Element *current;
         current=(Element *)malloc(sizeof(Element));
         head=current;
@@ -74,6 +74,7 @@ void List::pushBack(int data) {
         tail->nextElement=current;
         tail=current;
     }
+    size++;
 }
 
 void List::display(Element *curr) {
@@ -120,7 +121,7 @@ void List::pop() {
         size--;
         if(head->nextElement == nullptr)
         {
-            head = nullptr;
+            free(head);
         }
         else
         {
@@ -143,15 +144,14 @@ void List::popBack() {
         size--;
         if(tail->previousElement == nullptr)
         {
-            tail = nullptr;
+            //tail = nullptr;
             free(tail);
-            free(head);
+           // free(head);
         }
         else
         {
          Element *ptr;
          ptr = tail->previousElement;
-         tail = nullptr;
          free(tail);
          tail = ptr;
          tail->nextElement=nullptr;
@@ -169,15 +169,24 @@ void List::pushIx(int index, int value) {
         return;
     }
     Element *current;
-    Element *newOne;
 
-    newOne=(Element *)malloc(sizeof(Element));
+
     if (index == 0)
+    {
         push(value);
+        return;
+    }
+
     else if(index == size - 1 and size != 0)
+    {
         pushBack(value);
+        return;
+    }
+
     else if(index <= size/2)
     {
+        Element *newOne;
+        newOne=(Element *)malloc(sizeof(Element));
         size++;
         current=head;
         int counter = 0;
@@ -197,6 +206,8 @@ void List::pushIx(int index, int value) {
     }
     else if (index >size/2 && index < size)
     {
+        Element *newOne;
+        newOne=(Element *)malloc(sizeof(Element));
         size++;
         current=tail;
         int counter = size-1;

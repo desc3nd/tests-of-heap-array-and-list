@@ -59,7 +59,7 @@ void bin_heap::fixHeap() {
 
 
 void bin_heap::pop() {
-    if(size==0)
+    if(size<=0)
     {
         std::cerr<<"heap is empty - pop";
         return;
@@ -102,7 +102,7 @@ void bin_heap::fixAfterPop(int last) {
 }
 
 bin_heap::~bin_heap() {
-
+        if (root != nullptr)
         delete [] root;
 
 }
