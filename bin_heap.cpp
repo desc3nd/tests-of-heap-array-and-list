@@ -70,7 +70,7 @@ void bin_heap::pop() {
     {
         newRoot[i]=root[i];
     }
-    delete root;
+    delete [] root;
     root=newRoot;
     size--;
     fixAfterPop(last);
@@ -96,9 +96,7 @@ void bin_heap::fixAfterPop(int last) {
         root[son]=tmp;
         parent=son;
         son= 2 * parent + 1;
-
     }
-
 }
 
 bin_heap::~bin_heap() {

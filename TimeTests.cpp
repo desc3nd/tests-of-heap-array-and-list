@@ -21,19 +21,22 @@ void TimeTests::TestList() {
            list.readFromFile("txtToCheck.txt","push");
            time.stopCountingTime();
            std::cout<<"time : "<< time.elapsedTime()<<std::endl;
-
+            list.showList();
+            std::cout<<std::endl<<"Success!"<<std::endl;
         }
         else if (action == 2)
         {
             List list;
             list.readFromFile("txtToCheck.txt","pushBack");
-            while(list.returnSize() != 0)
+            while(list.returnSize()  > 0)
             {
                 time.startCountingTime();
                 list.pop();
                 time.stopCountingTime();
                 std::cout<<"time : "<< time.elapsedTime()<<std::endl;
             }
+            list.showList();
+            std::cout<<std::endl<<"Success!"<<std::endl;
         }
         else if (action == 3)
         {
@@ -42,6 +45,8 @@ void TimeTests::TestList() {
             list.readFromFile("txtToCheck.txt","pushBack");
             time.stopCountingTime();
             std::cout<<"time : "<< time.elapsedTime()<<std::endl;
+            list.showList();
+            std::cout<<std::endl<<"Success!"<<std::endl;
         }
         else if (action == 4)
         {
@@ -54,6 +59,8 @@ void TimeTests::TestList() {
                 time.stopCountingTime();
                 std::cout<<"time : "<< time.elapsedTime()<<std::endl;
             }
+            list.showList();
+            std::cout<<std::endl<<"Success!"<<std::endl;
         }
         else if (action == 5)
         {
@@ -69,6 +76,8 @@ void TimeTests::TestList() {
                 std::cout<<"time : "<< time.elapsedTime()<<std::endl;
                 count++;
             }
+            list.showList();
+            std::cout<<std::endl<<"Success!"<<std::endl;
         }
         else if (action == 6)
         {
@@ -85,6 +94,7 @@ void TimeTests::TestList() {
                 list.showList();
                 std::cout<<"time : "<< time.elapsedTime()<<std::endl;
             }
+            std::cout<<std::endl<<"Success!"<<std::endl;
         }
         else if (action == 7)
         {
@@ -94,6 +104,7 @@ void TimeTests::TestList() {
             list.showList();
             time.stopCountingTime();
             std::cout<<"time : "<< time.elapsedTime()<<std::endl;
+            std::cout<<std::endl<<"Success!"<<std::endl;
         }
         else if (action == 8)
         {
@@ -103,7 +114,10 @@ void TimeTests::TestList() {
             list.showIx(rand()%list.returnSize());
             time.stopCountingTime();
             std::cout<<"time : "<< time.elapsedTime()<<std::endl;
+            std::cout<<std::endl<<"Success!"<<std::endl;
         }
+        else
+            std::cout<<std::endl<<"Wrong action! Type again!"<<std::endl;
     }
 
 }
@@ -124,8 +138,6 @@ void TimeTests::operationMenu() {
     std::cout << "8.Print Structure:" << std::endl;
     std::cout << "-1.Return to main menu" << std::endl;
 
-
-
 }
 
 void TimeTests::TestDynamicArray() {
@@ -145,6 +157,8 @@ void TimeTests::TestDynamicArray() {
             array.readFromFile("txtToCheck.txt","push");
             time.stopCountingTime();
             std::cout<<"time : "<< time.elapsedTime()<<std::endl;
+            array.arrayDisplay();
+            std::cout<<std::endl<<"Success!"<<std::endl;
 
         }
         else if (action == 2)
@@ -158,6 +172,8 @@ void TimeTests::TestDynamicArray() {
                 time.stopCountingTime();
                 std::cout<<"time : "<< time.elapsedTime()<<std::endl;
             }
+            array.arrayDisplay();
+            std::cout<<std::endl<<"Success!"<<std::endl;
         }
         else if (action == 3)
         {
@@ -166,6 +182,8 @@ void TimeTests::TestDynamicArray() {
             array.readFromFile("txtToCheck.txt","pushBack");
             time.stopCountingTime();
             std::cout<<"time : "<< time.elapsedTime()<<std::endl;
+            array.arrayDisplay();
+            std::cout<<std::endl<<"Success!"<<std::endl;
         }
         else if (action == 4)
         {
@@ -178,6 +196,8 @@ void TimeTests::TestDynamicArray() {
                 time.stopCountingTime();
                 std::cout<<"time : "<< time.elapsedTime()<<std::endl;
             }
+            array.arrayDisplay();
+            std::cout<<std::endl<<"Success!"<<std::endl;
         }
         else if (action == 5)
         {
@@ -193,6 +213,8 @@ void TimeTests::TestDynamicArray() {
                 std::cout<<"time : "<< time.elapsedTime()<<std::endl;
                 count++;
             }
+            array.arrayDisplay();
+            std::cout<<std::endl<<"Success!"<<std::endl;
         }
         else if (action == 6)
         {
@@ -201,16 +223,15 @@ void TimeTests::TestDynamicArray() {
             while(array.returnSize() != 0 )
             {
                 int toDelete=rand()%array.returnSize();
-                std::cout<<toDelete<<std::endl;
-                std::cout<<"to "<<array.returnSize()<<std::endl;
                 time.startCountingTime();
                 array.popByIdx(toDelete);
                 time.stopCountingTime();
-                array.arrayDisplay();
                 std::cout<<"time : "<< time.elapsedTime()<<std::endl;
             }
+            array.arrayDisplay();
+            std::cout<<std::endl<<"Success!"<<std::endl;
         }
-        else if (action == 7)
+        else if (action == 8)
         {
             DynamicArray array;
             array.readFromFile("txtToCheck.txt","pushBack");
@@ -218,8 +239,9 @@ void TimeTests::TestDynamicArray() {
             array.arrayDisplay();
             time.stopCountingTime();
             std::cout<<"time : "<< time.elapsedTime()<<std::endl;
+            std::cout<<"Success!"<<std::endl;
         }
-        else if (action == 8)
+        else if (action == 7)
         {
             DynamicArray array;
             array.readFromFile("txtToCheck.txt","pushBack");
@@ -227,8 +249,13 @@ void TimeTests::TestDynamicArray() {
             array.printByIdx(rand()%array.returnSize());
             time.stopCountingTime();
             std::cout<<"time : "<< time.elapsedTime()<<std::endl;
+            std::cout<<std::endl<<"Success!"<<std::endl;
         }
+        else
+            std::cout<<std::endl<<"Wrong action! Type again!"<<std::endl;
     }
+
+
 
 
 }
@@ -255,16 +282,21 @@ void TimeTests::TestBinHeap() {
             heap.readFromFile("txtToCheck.txt");
             time.stopCountingTime();
             std::cout << "time : " << time.elapsedTime() << std::endl;
+            heap.displayHeap();
+            std::cout<<std::endl<<"Success!"<<std::endl;
         }
         else if (action == 2) {
             bin_heap heap;
             heap.readFromFile("txtToCheck.txt");
+            heap.displayHeap();
             while (heap.returnSize() != 0) {
                 time.startCountingTime();
                 heap.pop();
                 time.stopCountingTime();
                 std::cout << "time : " << time.elapsedTime() << std::endl;
             }
+            heap.displayHeap();
+            std::cout<<std::endl<<"Success!"<<std::endl;
         }
         else if (action == 3) {
             bin_heap heap;
@@ -273,6 +305,9 @@ void TimeTests::TestBinHeap() {
             heap.displayHeap();
             time.stopCountingTime();
             std::cout << "time : " << time.elapsedTime() << std::endl;
+            std::cout<<std::endl<<"Success!"<<std::endl;
         }
+        else
+            std::cout<<std::endl<<"Wrong action! Type again!"<<std::endl;
     }
 }

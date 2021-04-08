@@ -91,7 +91,7 @@ void List::display(Element *curr) {
 void List::showList() {
     Element *current;
     current=head;
-    if(head==nullptr or tail== nullptr)
+    if(size==0)
     {
         std::cout<<"There is nothing to show. The list is empty."<<std::endl;
     }
@@ -112,7 +112,7 @@ void List::showList() {
 }
 
 void List::pop() {
-    if(head == nullptr)
+    if(size == 0)
     {
         std::cerr<<"The list is empty.There is nothing to pop!"<<std::endl;
     }
@@ -134,7 +134,7 @@ void List::pop() {
 }
 
 void List::popBack() {
-    if(tail == nullptr)
+    if(size == 0)
     {
         std::cerr<<"The list is empty.There is nothing to popBack!"<<std::endl;
         return;

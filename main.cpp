@@ -10,7 +10,6 @@
 int main() {
     DataGenerator generator;
 menu menu;
-generator.genrateToFile(1,1000,20,"txtToCheck.txt");
-
+menu.displayMenu();
 
 }

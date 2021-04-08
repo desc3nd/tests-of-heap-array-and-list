@@ -35,6 +35,7 @@ CMakeFiles/nowy.dir/main.cpp.o: ../menu.h
 CMakeFiles/nowy.dir/main.cpp.o: ../stopWatch.h
 CMakeFiles/nowy.dir/main.cpp.o: ../structureTests.h
 
+CMakeFiles/nowy.dir/menu.cpp.o: ../DataGenerator.h
 CMakeFiles/nowy.dir/menu.cpp.o: ../DynamicArray.h
 CMakeFiles/nowy.dir/menu.cpp.o: ../List.h
 CMakeFiles/nowy.dir/menu.cpp.o: ../TimeTests.h

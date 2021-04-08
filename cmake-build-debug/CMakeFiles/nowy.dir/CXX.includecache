@@ -6,15 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/marcinek/Pulpit/tests-of-heap-array-and-list/DataGenerator.cpp
+/home/marcinek/Pulpit/tests-of-heap-array-and-list/DynamicArray.h
 string
+-
+
+/home/marcinek/Pulpit/tests-of-heap-array-and-list/bin_heap.cpp
+iostream
 -
 fstream
 -
-iostream
--
-DataGenerator.h
-/home/marcinek/Pulpit/tests-of-heap-array-and-list/DataGenerator.h
+bin_heap.h
+/home/marcinek/Pulpit/tests-of-heap-array-and-list/bin_heap.h
 
-/home/marcinek/Pulpit/tests-of-heap-array-and-list/DataGenerator.h
+/home/marcinek/Pulpit/tests-of-heap-array-and-list/bin_heap.h
+DynamicArray.h
+/home/marcinek/Pulpit/tests-of-heap-array-and-list/DynamicArray.h
 
