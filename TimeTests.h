@@ -1,6 +1,3 @@
-//
-// Created by Marcinek on 02.04.2021.
-//
 
 #ifndef NOWY_TIMETESTS_H
 #define NOWY_TIMETESTS_H

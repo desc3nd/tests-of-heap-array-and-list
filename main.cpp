@@ -5,9 +5,12 @@
 #include "BstTree.h"
 #include"structureTests.h"
 #include "TimeTests.h"
+#include "DataGenerator.h"
 #include "menu.h"
 int main() {
-
+    DataGenerator generator;
 menu menu;
-menu.displayMenu();
+generator.genrateToFile(1,1000,20,"txtToCheck.txt");
+
+
 }

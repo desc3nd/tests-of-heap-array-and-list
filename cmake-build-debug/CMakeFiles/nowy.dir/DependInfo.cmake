@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/marcinek/Pulpit/tests-of-heap-array-and-list/BstTree.cpp" "/home/marcinek/Pulpit/tests-of-heap-array-and-list/cmake-build-debug/CMakeFiles/nowy.dir/BstTree.cpp.o"
+  "/home/marcinek/Pulpit/tests-of-heap-array-and-list/DataGenerator.cpp" "/home/marcinek/Pulpit/tests-of-heap-array-and-list/cmake-build-debug/CMakeFiles/nowy.dir/DataGenerator.cpp.o"
   "/home/marcinek/Pulpit/tests-of-heap-array-and-list/DynamicArray.cpp" "/home/marcinek/Pulpit/tests-of-heap-array-and-list/cmake-build-debug/CMakeFiles/nowy.dir/DynamicArray.cpp.o"
   "/home/marcinek/Pulpit/tests-of-heap-array-and-list/List.cpp" "/home/marcinek/Pulpit/tests-of-heap-array-and-list/cmake-build-debug/CMakeFiles/nowy.dir/List.cpp.o"
   "/home/marcinek/Pulpit/tests-of-heap-array-and-list/TimeTests.cpp" "/home/marcinek/Pulpit/tests-of-heap-array-and-list/cmake-build-debug/CMakeFiles/nowy.dir/TimeTests.cpp.o"

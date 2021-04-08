@@ -88,6 +88,12 @@
 		<Unit filename="/home/marcinek/Pulpit/tests-of-heap-array-and-list/BstTree.h">
 			<Option target="nowy"/>
 		</Unit>
+		<Unit filename="/home/marcinek/Pulpit/tests-of-heap-array-and-list/DataGenerator.cpp">
+			<Option target="nowy"/>
+		</Unit>
+		<Unit filename="/home/marcinek/Pulpit/tests-of-heap-array-and-list/DataGenerator.h">
+			<Option target="nowy"/>
+		</Unit>
 		<Unit filename="/home/marcinek/Pulpit/tests-of-heap-array-and-list/DynamicArray.cpp">
 			<Option target="nowy"/>
 		</Unit>

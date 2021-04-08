@@ -1,6 +1,4 @@
-//
-// Created by Marcinek on 04.03.2021.
-//
+
 
 #include "DynamicArray.h"
 #include <memory>

@@ -170,6 +170,33 @@ BstTree.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nowy.dir/build.make CMakeFiles/nowy.dir/BstTree.cpp.s
 .PHONY : BstTree.cpp.s
 
+DataGenerator.o: DataGenerator.cpp.o
+
+.PHONY : DataGenerator.o
+
+# target to build an object file
+DataGenerator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nowy.dir/build.make CMakeFiles/nowy.dir/DataGenerator.cpp.o
+.PHONY : DataGenerator.cpp.o
+
+DataGenerator.i: DataGenerator.cpp.i
+
+.PHONY : DataGenerator.i
+
+# target to preprocess a source file
+DataGenerator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nowy.dir/build.make CMakeFiles/nowy.dir/DataGenerator.cpp.i
+.PHONY : DataGenerator.cpp.i
+
+DataGenerator.s: DataGenerator.cpp.s
+
+.PHONY : DataGenerator.s
+
+# target to generate assembly for a file
+DataGenerator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nowy.dir/build.make CMakeFiles/nowy.dir/DataGenerator.cpp.s
+.PHONY : DataGenerator.cpp.s
+
 DynamicArray.o: DynamicArray.cpp.o
 
 .PHONY : DynamicArray.o
@@ -398,6 +425,9 @@ help:
 	@echo "... BstTree.o"
 	@echo "... BstTree.i"
 	@echo "... BstTree.s"
+	@echo "... DataGenerator.o"
+	@echo "... DataGenerator.i"
+	@echo "... DataGenerator.s"
 	@echo "... DynamicArray.o"
 	@echo "... DynamicArray.i"
 	@echo "... DynamicArray.s"

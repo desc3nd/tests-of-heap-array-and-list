@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/nowy.dir/BstTree.cpp.o"
+  "CMakeFiles/nowy.dir/DataGenerator.cpp.o"
   "CMakeFiles/nowy.dir/DynamicArray.cpp.o"
   "CMakeFiles/nowy.dir/List.cpp.o"
   "CMakeFiles/nowy.dir/TimeTests.cpp.o"

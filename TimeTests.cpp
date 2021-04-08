@@ -1,6 +1,4 @@
-//
-// Created by Marcinek on 02.04.2021.
-//
+
 
 #include <iostream>
 #include "TimeTests.h"

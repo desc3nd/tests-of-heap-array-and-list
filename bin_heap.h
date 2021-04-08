@@ -1,6 +1,3 @@
-//
-// Created by Marcinek on 31.03.2021.
-//
 
 #ifndef NOWY_BIN_HEAP_H
 #define NOWY_BIN_HEAP_H
