@@ -6,21 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/marcinek/Pulpit/tests-of-heap-array-and-list/List.cpp
-List.h
-/home/marcinek/Pulpit/tests-of-heap-array-and-list/List.h
-cstdlib
--
-iostream
--
+/home/marcinek/Pulpit/tests-of-heap-array-and-list/DataGenerator.cpp
 string
 -
 fstream
 -
-cctype
+iostream
 -
+DataGenerator.h
+/home/marcinek/Pulpit/tests-of-heap-array-and-list/DataGenerator.h
 
-/home/marcinek/Pulpit/tests-of-heap-array-and-list/List.h
-string
--
+/home/marcinek/Pulpit/tests-of-heap-array-and-list/DataGenerator.h
 

@@ -4,6 +4,9 @@
 CMakeFiles/nowy.dir/BstTree.cpp.o: ../BstTree.cpp
 CMakeFiles/nowy.dir/BstTree.cpp.o: ../BstTree.h
 
+CMakeFiles/nowy.dir/DataGenerator.cpp.o: ../DataGenerator.cpp
+CMakeFiles/nowy.dir/DataGenerator.cpp.o: ../DataGenerator.h
+
 CMakeFiles/nowy.dir/DynamicArray.cpp.o: ../DynamicArray.cpp
 CMakeFiles/nowy.dir/DynamicArray.cpp.o: ../DynamicArray.h
 
@@ -22,6 +25,7 @@ CMakeFiles/nowy.dir/bin_heap.cpp.o: ../bin_heap.cpp
 CMakeFiles/nowy.dir/bin_heap.cpp.o: ../bin_heap.h
 
 CMakeFiles/nowy.dir/main.cpp.o: ../BstTree.h
+CMakeFiles/nowy.dir/main.cpp.o: ../DataGenerator.h
 CMakeFiles/nowy.dir/main.cpp.o: ../DynamicArray.h
 CMakeFiles/nowy.dir/main.cpp.o: ../List.h
 CMakeFiles/nowy.dir/main.cpp.o: ../TimeTests.h

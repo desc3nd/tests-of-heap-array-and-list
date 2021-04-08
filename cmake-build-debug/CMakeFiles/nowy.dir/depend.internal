@@ -4,6 +4,9 @@
 CMakeFiles/nowy.dir/BstTree.cpp.o
  /home/marcinek/Pulpit/tests-of-heap-array-and-list/BstTree.cpp
  /home/marcinek/Pulpit/tests-of-heap-array-and-list/BstTree.h
+CMakeFiles/nowy.dir/DataGenerator.cpp.o
+ /home/marcinek/Pulpit/tests-of-heap-array-and-list/DataGenerator.cpp
+ /home/marcinek/Pulpit/tests-of-heap-array-and-list/DataGenerator.h
 CMakeFiles/nowy.dir/DynamicArray.cpp.o
  /home/marcinek/Pulpit/tests-of-heap-array-and-list/DynamicArray.cpp
  /home/marcinek/Pulpit/tests-of-heap-array-and-list/DynamicArray.h
@@ -23,6 +26,7 @@ CMakeFiles/nowy.dir/bin_heap.cpp.o
  /home/marcinek/Pulpit/tests-of-heap-array-and-list/bin_heap.h
 CMakeFiles/nowy.dir/main.cpp.o
  /home/marcinek/Pulpit/tests-of-heap-array-and-list/BstTree.h
+ /home/marcinek/Pulpit/tests-of-heap-array-and-list/DataGenerator.h
  /home/marcinek/Pulpit/tests-of-heap-array-and-list/DynamicArray.h
  /home/marcinek/Pulpit/tests-of-heap-array-and-list/List.h
  /home/marcinek/Pulpit/tests-of-heap-array-and-list/TimeTests.h
