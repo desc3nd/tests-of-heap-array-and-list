@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/studia 2k19/projekty/tests-of-heap-array-and-list/DynamicArray.h
+string
+-
+
+C:/studia 2k19/projekty/tests-of-heap-array-and-list/List.h
+string
+-
+
+C:/studia 2k19/projekty/tests-of-heap-array-and-list/TimeTests.cpp
+iostream
+-
+TimeTests.h
+C:/studia 2k19/projekty/tests-of-heap-array-and-list/TimeTests.h
+
+C:/studia 2k19/projekty/tests-of-heap-array-and-list/TimeTests.h
+List.h
+C:/studia 2k19/projekty/tests-of-heap-array-and-list/List.h
+stopWatch.h
+C:/studia 2k19/projekty/tests-of-heap-array-and-list/stopWatch.h
+DynamicArray.h
+C:/studia 2k19/projekty/tests-of-heap-array-and-list/DynamicArray.h
+bin_heap.h
+C:/studia 2k19/projekty/tests-of-heap-array-and-list/bin_heap.h
+
+C:/studia 2k19/projekty/tests-of-heap-array-and-list/bin_heap.h
+DynamicArray.h
+C:/studia 2k19/projekty/tests-of-heap-array-and-list/DynamicArray.h
+
+C:/studia 2k19/projekty/tests-of-heap-array-and-list/stopWatch.h
+chrono
+-
+

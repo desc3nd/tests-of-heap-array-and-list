@@ -1,0 +1,4 @@
+"C:\Program Files\JetBrains\CLion 2019.3.5\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "C:\studia 2k19\projekty\tests-of-heap-array-and-list"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/studia 2k19/projekty/tests-of-heap-array-and-list/cmake-build-debug
