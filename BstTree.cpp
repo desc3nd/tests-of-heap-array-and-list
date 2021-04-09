@@ -11,8 +11,7 @@ BstTree::BstTree() {
 }
 
 void BstTree::push(int value) {
-    if(size==0)
-    {
+    if (size == 0) {
         root = new Node;
         root->value = value;
     }

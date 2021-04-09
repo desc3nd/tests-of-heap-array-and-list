@@ -13,12 +13,11 @@ structureTests::structureTests() {
 void structureTests::propList() {
     List list;
     list.readFromFile("txtToCheck.txt","pushBack");
-    for (int i = 0; i < 10; i++)
-    {
+    for (int i = 0; i < 5; i++) {
         list.pushBack(rand() % 1000);
     }
     list.pop();
-    list.popBack();
+    //list.popBack();
     list.showIx(1);
     list.pushBack(2);
     list.pushIx(2,2);
@@ -28,7 +27,7 @@ void structureTests::propList() {
 
 void structureTests::propDynamicArray() {
     DynamicArray Array;
-    Array.readFromFile("txtToCheck.txt");
+    Array.readFromFile("txtToCheck.txt", "push");
     for (int i = 0; i < 10; i++)
     {
         Array.pushBack(rand() % 1000);

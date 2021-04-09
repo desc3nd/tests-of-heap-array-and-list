@@ -149,6 +149,33 @@ BstTree.cpp.s:
 	$(MAKE) -f CMakeFiles\nowy.dir\build.make CMakeFiles/nowy.dir/BstTree.cpp.s
 .PHONY : BstTree.cpp.s
 
+DataGenerator.obj: DataGenerator.cpp.obj
+
+.PHONY : DataGenerator.obj
+
+# target to build an object file
+DataGenerator.cpp.obj:
+	$(MAKE) -f CMakeFiles\nowy.dir\build.make CMakeFiles/nowy.dir/DataGenerator.cpp.obj
+.PHONY : DataGenerator.cpp.obj
+
+DataGenerator.i: DataGenerator.cpp.i
+
+.PHONY : DataGenerator.i
+
+# target to preprocess a source file
+DataGenerator.cpp.i:
+	$(MAKE) -f CMakeFiles\nowy.dir\build.make CMakeFiles/nowy.dir/DataGenerator.cpp.i
+.PHONY : DataGenerator.cpp.i
+
+DataGenerator.s: DataGenerator.cpp.s
+
+.PHONY : DataGenerator.s
+
+# target to generate assembly for a file
+DataGenerator.cpp.s:
+	$(MAKE) -f CMakeFiles\nowy.dir\build.make CMakeFiles/nowy.dir/DataGenerator.cpp.s
+.PHONY : DataGenerator.cpp.s
+
 DynamicArray.obj: DynamicArray.cpp.obj
 
 .PHONY : DynamicArray.obj
@@ -284,6 +311,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles\nowy.dir\build.make CMakeFiles/nowy.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+menu.obj: menu.cpp.obj
+
+.PHONY : menu.obj
+
+# target to build an object file
+menu.cpp.obj:
+	$(MAKE) -f CMakeFiles\nowy.dir\build.make CMakeFiles/nowy.dir/menu.cpp.obj
+.PHONY : menu.cpp.obj
+
+menu.i: menu.cpp.i
+
+.PHONY : menu.i
+
+# target to preprocess a source file
+menu.cpp.i:
+	$(MAKE) -f CMakeFiles\nowy.dir\build.make CMakeFiles/nowy.dir/menu.cpp.i
+.PHONY : menu.cpp.i
+
+menu.s: menu.cpp.s
+
+.PHONY : menu.s
+
+# target to generate assembly for a file
+menu.cpp.s:
+	$(MAKE) -f CMakeFiles\nowy.dir\build.make CMakeFiles/nowy.dir/menu.cpp.s
+.PHONY : menu.cpp.s
+
 stopWatch.obj: stopWatch.cpp.obj
 
 .PHONY : stopWatch.obj
@@ -350,6 +404,9 @@ help:
 	@echo ... BstTree.obj
 	@echo ... BstTree.i
 	@echo ... BstTree.s
+	@echo ... DataGenerator.obj
+	@echo ... DataGenerator.i
+	@echo ... DataGenerator.s
 	@echo ... DynamicArray.obj
 	@echo ... DynamicArray.i
 	@echo ... DynamicArray.s
@@ -365,6 +422,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... menu.obj
+	@echo ... menu.i
+	@echo ... menu.s
 	@echo ... stopWatch.obj
 	@echo ... stopWatch.i
 	@echo ... stopWatch.s

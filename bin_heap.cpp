@@ -4,20 +4,19 @@
 #include "bin_heap.h"
 
 bin_heap::bin_heap() {
-    this->root= nullptr;
-    size=0;
+    this->root = nullptr;
+    size = 0;
 
 }
 
 void  bin_heap::push(int data) {
-    int *newRoot= new int [size+1];
-    for (int i = 0; i < size; i++)
-    {
-        newRoot[i]=root[i];
+    int *newRoot = new int[size + 1];
+    for (int i = 0; i < size; i++) {
+        newRoot[i] = root[i];
     }
-    newRoot[size]=data;
-    delete root;
-    root=newRoot;
+    newRoot[size] = data;
+    delete[] root;
+    root = newRoot;
     fixHeap();
     size++;
 
@@ -59,26 +58,24 @@ void bin_heap::fixHeap() {
 
 
 void bin_heap::pop() {
-    if(size==0)
-    {
-        std::cerr<<"heap is empty - pop";
+    if (size <= 0) {
+        std::cerr << "heap is empty - pop";
         return;
     }
-    int last= root[size-1];
-    int *newRoot=new int [size-1];
-    for (int i = 0; i< size; i++)
-    {
-        newRoot[i]=root[i];
+    int last = root[size - 1];
+    int *newRoot = new int[size - 1];
+    for (int i = 0; i < size; i++) {
+        newRoot[i] = root[i];
     }
-    delete root;
-    root=newRoot;
+    delete[] root;
+    root = newRoot;
     size--;
     fixAfterPop(last);
 }
 
 void bin_heap::fixAfterPop(int last) {
-    int parent=0;
-    int son= 2 * parent + 1;
+    int parent = 0;
+    int son = 2 * parent + 1;
     root[parent]=last;
     while(son < size)
     {
@@ -96,36 +93,34 @@ void bin_heap::fixAfterPop(int last) {
         root[son]=tmp;
         parent=son;
         son= 2 * parent + 1;
-
     }
-
 }
 
 bin_heap::~bin_heap() {
-
-        delete [] root;
+    if (size != 0)
+        delete[] root;
 
 }
 
-void bin_heap::readFromFile(const std::string &filename)
-{
+void bin_heap::readFromFile(const std::string &filename) {
     std::ifstream read;
     read.open(filename);
-    if (!read.good())
-    {
-        std::cerr<<"cannot open file "<<filename<<"heap - read from file " <<std::endl;
+    if (!read.good()) {
+        std::cerr << "cannot open file " << filename << "heap - read from file " << std::endl;
         return;
     }
     int var;
-    while (read>>var)
-    {
-        if(!isblank(var))
-        {
+    while (read >> var) {
+        if (!isblank(var)) {
             push(var);
         }
     }
     read.close();
 
 
+}
+
+int bin_heap::returnSize() {
+    return size;
 }
 

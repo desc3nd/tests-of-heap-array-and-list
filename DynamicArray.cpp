@@ -1,6 +1,4 @@
-//
-// Created by Marcinek on 04.03.2021.
-//
+
 
 #include "DynamicArray.h"
 #include <memory>
@@ -116,37 +114,43 @@ void DynamicArray::popFront() {
 }
 
 DynamicArray::~DynamicArray() {
-        delete [] head;
+    if (head != nullptr) {
+        delete[] head;
+    }
+
 }
 
 int DynamicArray::printByIdx(int idx) {
-    if(idx < 0 || idx >= size )
-    {
-        std::cerr<<"index out off range  - printByIdx";
-        return  -1;
+    if (idx < 0 || idx >= size) {
+        std::cerr << "index out off range  - printByIdx";
+        return -1;
     }
     return head[idx];
 
 
 }
 
-void DynamicArray::readFromFile(const std::string &filename) {
+void DynamicArray::readFromFile(const std::string &filename, const std::string &operation) {
     std::ifstream read;
     read.open(filename);
-    if (!read.good())
-    {
-        std::cerr<<"cannot open file "<<filename<<"DynamicArray - read from file " <<std::endl;
+    if (!read.good()) {
+        std::cerr << "cannot open file " << filename << "DynamicArray - read from file " << std::endl;
         return;
     }
     int var;
-    while (read>>var)
-    {
-        if(!isblank(var))
-        {
-            pushBack(var);
+    while (read >> var) {
+        if (!isblank(var)) {
+            if (operation == "pushBack" or operation == "fill")
+                pushBack(var);
+            else if (operation == "push")
+                pushFront(var);
         }
     }
     read.close();
 
+}
+
+int DynamicArray::returnSize() {
+    return size;
 }
 

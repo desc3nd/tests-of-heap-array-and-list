@@ -5,13 +5,11 @@
 #include "BstTree.h"
 #include"structureTests.h"
 #include "TimeTests.h"
-int main() {
-    structureTests tests;
+#include "DataGenerator.h"
+#include "menu.h"
 
-    tests.propDynamicArray();
-    tests.propList();
-    tests.propBinHeap();
-    TimeTests testy;
-    testy.TestList("List");
+int main() {
+    menu menu;
+    menu.displayMenu();
 
 }

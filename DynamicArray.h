@@ -8,21 +8,33 @@
 class DynamicArray {
 public:
     explicit DynamicArray();
-    ~DynamicArray();
-    void pushBack(int data);
-    void arrayDisplay();
-    void pushFront(int data);
-    void pushByIdx(int idx, int data);
-    void popByIdx(int idx);
-    void popBack();
-    void popFront();
-    int printByIdx(int idx);
-    void readFromFile(const std::string& filename);
 
+    ~DynamicArray();
+
+    void pushBack(int data);
+
+    void arrayDisplay();
+
+    void pushFront(int data);
+
+    void pushByIdx(int idx, int data);
+
+    void popByIdx(int idx);
+
+    void popBack();
+
+    void popFront();
+
+    int printByIdx(int idx);
+
+    void readFromFile(const std::string &filename, const std::string &operation);
+
+    int returnSize();
 
 private:
     int size;
     int *head;
+
     void test();
 };
 

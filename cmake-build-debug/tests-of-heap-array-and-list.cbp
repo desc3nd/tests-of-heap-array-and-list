@@ -86,6 +86,12 @@
 		<Unit filename="C:/studia 2k19/projekty/tests-of-heap-array-and-list/BstTree.h">
 			<Option target="nowy"/>
 		</Unit>
+		<Unit filename="C:/studia 2k19/projekty/tests-of-heap-array-and-list/DataGenerator.cpp">
+			<Option target="nowy"/>
+		</Unit>
+		<Unit filename="C:/studia 2k19/projekty/tests-of-heap-array-and-list/DataGenerator.h">
+			<Option target="nowy"/>
+		</Unit>
 		<Unit filename="C:/studia 2k19/projekty/tests-of-heap-array-and-list/DynamicArray.cpp">
 			<Option target="nowy"/>
 		</Unit>
@@ -111,6 +117,12 @@
 			<Option target="nowy"/>
 		</Unit>
 		<Unit filename="C:/studia 2k19/projekty/tests-of-heap-array-and-list/main.cpp">
+			<Option target="nowy"/>
+		</Unit>
+		<Unit filename="C:/studia 2k19/projekty/tests-of-heap-array-and-list/menu.cpp">
+			<Option target="nowy"/>
+		</Unit>
+		<Unit filename="C:/studia 2k19/projekty/tests-of-heap-array-and-list/menu.h">
 			<Option target="nowy"/>
 		</Unit>
 		<Unit filename="C:/studia 2k19/projekty/tests-of-heap-array-and-list/stopWatch.cpp">

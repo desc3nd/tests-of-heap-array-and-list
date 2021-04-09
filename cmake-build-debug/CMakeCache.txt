@@ -112,7 +112,7 @@ CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 CMAKE_GNUtoMS:BOOL=OFF
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/nowy
+CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/tests-of-heap-array-and-list
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=C:/CPP/MinGW/bin/ld.exe
@@ -239,22 +239,10 @@ CMAKE_STRIP:FILEPATH=C:/CPP/MinGW/bin/strip.exe
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
-nowy_BINARY_DIR:STATIC=C:/studia 2k19/projekty/tests-of-heap-array-and-list/cmake-build-debug
-
-//Value Computed by CMake
-nowy_SOURCE_DIR:STATIC=C:/studia 2k19/projekty/tests-of-heap-array-and-list
-
-//Value Computed by CMake
 tests-of-heap-array-and-list_BINARY_DIR:STATIC=C:/studia 2k19/projekty/tests-of-heap-array-and-list/cmake-build-debug
 
 //Value Computed by CMake
 tests-of-heap-array-and-list_SOURCE_DIR:STATIC=C:/studia 2k19/projekty/tests-of-heap-array-and-list
-
-//Value Computed by CMake
-tests-of_BINARY_DIR:STATIC=C:/studia 2k19/projekty/tests-of-heap-array-and-list/cmake-build-debug
-
-//Value Computed by CMake
-tests-of_SOURCE_DIR:STATIC=C:/studia 2k19/projekty/tests-of-heap-array-and-list
 
 
 ########################

@@ -1,6 +1,3 @@
-//
-// Created by Marcinek on 02.04.2021.
-//
 
 #ifndef NOWY_TIMETESTS_H
 #define NOWY_TIMETESTS_H
@@ -10,11 +7,17 @@
 #include "bin_heap.h"
 class TimeTests {
 public:
-   explicit TimeTests();
-   void TestList(std::string structure);
+    explicit TimeTests();
+
+    void TestList();
+
+    void TestDynamicArray();
+
+    void TestBinHeap();
+
 
 private:
-   void operationMenu();
+    void operationMenu();
 };
 
 

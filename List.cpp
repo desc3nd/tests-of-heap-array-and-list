@@ -6,33 +6,30 @@
 #include <fstream>
 #include <cctype>
 List::List() {
-head=(Element *)malloc(sizeof(Element));
-tail=(Element *)malloc(sizeof(Element));
-head->elementData=0;
-head->nextElement=nullptr;
-head->previousElement=nullptr;
-tail->nextElement=nullptr;
-tail->previousElement=nullptr;
-tail=nullptr;
-head=nullptr;
-iter=0;
-size=0;
+    head = nullptr;
+    tail = nullptr;
+    iter = 0;
+    size = 0;
 }
-List::~List()
-{
-    while (head != tail) {
-        head = head->nextElement;
-        free(head->previousElement);
+
+List::~List() {
+    Element *current;
+
+    for (int i = 0; i < size; i++) {
+        current = head->nextElement;
+        free(head);
+        head = current;
     }
 
-    delete tail;
+
 }
+
 void List::push(int data) {
     size++;
     Element *current;
-    current=(Element *)malloc(sizeof(Element));
+    current = (Element *) malloc(sizeof(Element));
     iter++;
-    if(head==nullptr)
+    if (head == nullptr)
     {
         head=current;
         tail=head;
@@ -43,7 +40,6 @@ void List::push(int data) {
     }
     else
     {
-
         current->elementData=data;
         current->nextElement=head;
         current->previousElement=nullptr;
@@ -55,30 +51,29 @@ void List::push(int data) {
         }
 
     }
-
-
 }
 
 void List::pushBack(int data) {
+
+    if (size == 0) {
+        Element *current;
+        current = (Element *) malloc(sizeof(Element));
+        head = current;
+        tail = current;
+        head->elementData = data;
+        head->previousElement = nullptr;
+        head->nextElement = nullptr;
+
+    } else {
+        Element *current;
+        current = (Element *) malloc(sizeof(Element));
+        current->elementData = data;
+        current->previousElement = tail;
+        current->nextElement = nullptr;
+        tail->nextElement = current;
+        tail = current;
+    }
     size++;
-    Element *current;
-    current=(Element *)malloc(sizeof(Element));
-    if (head==nullptr)
-    {
-        head=current;
-        tail=current;
-        head->elementData=data;
-        head->previousElement=nullptr;
-        head->nextElement=nullptr;
-    }
-    else
-    {
-        current->elementData=data;
-        current->previousElement=tail;
-        current->nextElement=nullptr;
-        tail->nextElement=current;
-        tail=current;
-    }
 }
 
 void List::display(Element *curr) {
@@ -94,21 +89,17 @@ void List::display(Element *curr) {
 
 void List::showList() {
     Element *current;
-    current=head;
-    if(head==nullptr or tail== nullptr)
-    {
-        std::cout<<"There is nothing to show. The list is empty."<<std::endl;
-    }
-    else
-    {
-        std::cout<<"This is your list: ";
-        while(current!=nullptr)
-        {
-            std::cout<<current->elementData<<" ";
-            if(current == tail)
+    current = head;
+    if (size == 0) {
+        std::cout << "There is nothing to show. The list is empty." << std::endl;
+    } else {
+        std::cout << "This is your list: ";
+        while (current != nullptr) {
+            std::cout << current->elementData << " ";
+            if (current == tail)
                 break;
-            current=current->nextElement;
-           // head=head->nextElement;
+            current = current->nextElement;
+            // head=head->nextElement;
         }
 
     }
@@ -116,48 +107,37 @@ void List::showList() {
 }
 
 void List::pop() {
-    if(head == nullptr)
-    {
-        std::cerr<<"The list is empty.There is nothing to pop!"<<std::endl;
-    }
-    else
-    {
+    if (size == 0) {
+        std::cerr << "The list is empty.There is nothing to pop!" << std::endl;
+    } else {
         size--;
-        if(head->nextElement == nullptr)
-        {
-            head = nullptr;
-        }
-        else
-        {
-            Element *ptr;
-            ptr=head->nextElement;
+        if (head->nextElement == nullptr) {
             free(head);
-            head=ptr;
+        } else {
+            Element *ptr;
+            ptr = head->nextElement;
+            free(head);
+            head = ptr;
         }
     }
 }
 
 void List::popBack() {
-    if(tail == nullptr)
-    {
-        std::cerr<<"The list is empty.There is nothing to popBack!"<<std::endl;
+    if (size == 0) {
+        std::cerr << "The list is empty.There is nothing to popBack!" << std::endl;
         return;
-    }
-    else
-    {
+    } else {
         size--;
-        if(tail->previousElement == nullptr)
-        {
-            tail = nullptr;
-        }
-        else
-        {
-         Element *ptr;
-         ptr = tail->previousElement;
-         tail = nullptr;
-         free(tail);
-         tail = ptr;
-         tail->nextElement=nullptr;
+        if (tail->previousElement == nullptr) {
+            //tail = nullptr;
+            free(tail);
+            // free(head);
+        } else {
+            Element *ptr;
+            ptr = tail->previousElement;
+            free(tail);
+            tail = ptr;
+            tail->nextElement = nullptr;
         }
     }
 }
@@ -166,55 +146,54 @@ void List::popBack() {
 
 void List::pushIx(int index, int value) {
     //wyjatek kiedy index > size -1 i < 0 i kiedy value is not int
-    if(index > size - 1 || index < 0)
-    {
-        std::cerr<<" pushIx: It's not a proper index.";
+    if (index > size - 1 || index < 0) {
+        std::cerr << " pushIx: It's not a proper index.";
         return;
     }
     Element *current;
-    Element *newOne;
 
-    newOne=(Element *)malloc(sizeof(Element));
-    if (index == 0)
+
+    if (index == 0) {
         push(value);
-    else if(index == size - 1 and size != 0)
+        return;
+    } else if (index == size - 1 and size != 0) {
         pushBack(value);
-    else if(index <= size/2)
-    {
+        return;
+    } else if (index <= size / 2) {
+        Element *newOne;
+        newOne = (Element *) malloc(sizeof(Element));
         size++;
-        current=head;
+        current = head;
         int counter = 0;
-        while(counter<index-1)
-        {
-            current=current->nextElement;
+        while (counter < index - 1) {
+            current = current->nextElement;
             counter++;
         }
         Element *ptr;
-        ptr=current->nextElement;
-        current->nextElement=newOne;
-        current->nextElement->previousElement=current;
-        current->nextElement->elementData=value;
-        ptr->previousElement=current->nextElement;
-        current->nextElement->nextElement=ptr;
+        ptr = current->nextElement;
+        current->nextElement = newOne;
+        current->nextElement->previousElement = current;
+        current->nextElement->elementData = value;
+        ptr->previousElement = current->nextElement;
+        current->nextElement->nextElement = ptr;
 
-    }
-    else if (index >size/2 && index < size)
-    {
+    } else if (index > size / 2 && index < size) {
+        Element *newOne;
+        newOne = (Element *) malloc(sizeof(Element));
         size++;
-        current=tail;
-        int counter = size-1;
-        while(counter>index+1)
-        {
-            current=current->previousElement;
+        current = tail;
+        int counter = size - 1;
+        while (counter > index + 1) {
+            current = current->previousElement;
             counter--;
         }
         Element *ptr;
-        ptr=current->previousElement;
-        current->previousElement=newOne;
-        current->previousElement->nextElement=current;
-        current->previousElement->elementData=value;
-        ptr->nextElement=current->previousElement;
-        current->previousElement->previousElement=ptr;
+        ptr = current->previousElement;
+        current->previousElement = newOne;
+        current->previousElement->nextElement = current;
+        current->previousElement->elementData = value;
+        ptr->nextElement = current->previousElement;
+        current->previousElement->previousElement = ptr;
     }
 
 }
@@ -284,51 +263,47 @@ int List::returnSize() {
 }
 
 void List::popByIdx(int index) {
-    if(index > size - 1 || index < 0)
-    {
-        std::cerr<<" popByIx: It's not a proper index.";
+    if (index > size - 1 || index < 0) {
+        std::cerr << " popByIx: It's not a proper index.";
         return;
     }
     Element *current;
-    if (size == 0)
-    {
-        std::cerr<<" popByIx: the list is empty.";
+    if (size == 0) {
+        std::cerr << " popByIx: the list is empty.";
         return;
     }
-    else if(index == size-1 and size != 0)
+    if (index == 0) {
+        pop();
+        return;
+    } else if (index == size - 1 and size != 0)
         popBack();
-    else if(index <= size/2)
-    {
-        size--;
-        current=head;
+    else if (index <= size / 2) {
+
+        current = head;
         int counter = 0;
-        while(counter<index-1)
-        {
-            current=current->nextElement;
+        while (counter < index - 1) {
+            current = current->nextElement;
             counter++;
         }
         Element *ptr;
-        ptr=current->nextElement;
+        ptr = current->nextElement;
         current->nextElement = ptr->nextElement;
-        current->nextElement->previousElement=current;
+        current->nextElement->previousElement = current;
         free(ptr);
-
-    }
-    else if (index >size/2 && index < size)
-    {
         size--;
-        current=tail;
-        int counter = size-1;
-        while(counter>index+1)
-        {
-            current=current->previousElement;
+    } else if (index > size / 2 && index < size) {
+        current = tail;
+        int counter = size - 1;
+        while (counter > index - 1) {
+            current = current->previousElement;
             counter--;
         }
         Element *ptr;
-        ptr=current->nextElement;
+        ptr = current->nextElement;
         current->nextElement = ptr->nextElement;
-        current->nextElement->previousElement=current;
+        current->nextElement->previousElement = current;
         free(ptr);
+        size--;
     }
 }
 
