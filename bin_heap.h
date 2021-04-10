@@ -11,6 +11,7 @@ public:
     ~bin_heap();
     void push(int data);
     void displayHeap();
+    int showByIx(int ix);
     void pop();
     void readFromFile(const std::string& filename);
     int returnSize();

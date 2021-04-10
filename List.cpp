@@ -50,6 +50,7 @@ void List::push(int data) {
         }
 
     }
+
 }
 
 void List::pushBack(int data) {
@@ -162,18 +163,16 @@ void List::popBack() {
 
 
 void List::pushIx(int index, int value) {
-    //wyjatek kiedy index > size -1 i < 0 i kiedy value is not int
-    if(index > size - 1 || index < 0)
-    {
-        std::cerr<<" pushIx: It's not a proper index.";
-        return;
-    }
     Element *current;
-
-
     if (index == 0)
     {
         push(value);
+        return;
+    }
+    //wyjatek kiedy index > size -1 i < 0 i kiedy value is not int
+   else if((index > size - 1 and size>0) || index < 0)
+    {
+        std::cerr<<" pushIx: It's not a proper index.";
         return;
     }
 

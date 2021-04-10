@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/nowy.dir/bin_heap.cpp.o"
   "CMakeFiles/nowy.dir/main.cpp.o"
   "CMakeFiles/nowy.dir/menu.cpp.o"
+  "CMakeFiles/nowy.dir/outcomes.cpp.o"
   "CMakeFiles/nowy.dir/stopWatch.cpp.o"
   "CMakeFiles/nowy.dir/structureTests.cpp.o"
   "nowy"

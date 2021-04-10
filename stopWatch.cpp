@@ -1,9 +1,6 @@
 #include<chrono>
 #include "stopWatch.h"
 
-stopWatch::stopWatch() {
-
-}
 
 void stopWatch::startCountingTime() {
     begin=std::chrono::high_resolution_clock::now();

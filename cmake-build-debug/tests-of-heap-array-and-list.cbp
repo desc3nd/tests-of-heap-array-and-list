@@ -127,6 +127,12 @@
 		<Unit filename="/home/marcinek/Pulpit/tests-of-heap-array-and-list/menu.h">
 			<Option target="nowy"/>
 		</Unit>
+		<Unit filename="/home/marcinek/Pulpit/tests-of-heap-array-and-list/outcomes.cpp">
+			<Option target="nowy"/>
+		</Unit>
+		<Unit filename="/home/marcinek/Pulpit/tests-of-heap-array-and-list/outcomes.h">
+			<Option target="nowy"/>
+		</Unit>
 		<Unit filename="/home/marcinek/Pulpit/tests-of-heap-array-and-list/stopWatch.cpp">
 			<Option target="nowy"/>
 		</Unit>

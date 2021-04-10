@@ -7,9 +7,12 @@
 #include "TimeTests.h"
 #include "DataGenerator.h"
 #include "menu.h"
+#include "outcomes.h"
 int main() {
-    DataGenerator generator;
-menu menu;
-menu.displayMenu();
-
+//menu menu;
+//menu.displayMenu();
+outcomes out;
+out.testList();
+   // out.testArray();
+//    out.testHeap();
 }

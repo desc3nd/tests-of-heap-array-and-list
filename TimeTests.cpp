@@ -16,37 +16,48 @@ void TimeTests::TestList() {
             return;
         else if (action == 1)
         {
-            List list;
-           time.startCountingTime();
-           list.readFromFile("txtToCheck.txt","push");
-           time.stopCountingTime();
-           std::cout<<"time : "<< time.elapsedTime()<<std::endl;
-            list.showList();
+           long long allTime=0;
+            for(int i=0;i<100;i++)
+            {
+                List list;
+                list.readFromFile("txtToCheck.txt","push");
+                time.startCountingTime();
+                list.push(1);
+                time.stopCountingTime();
+                allTime+=time.elapsedTime();
+            }
+            std::cout<<"time : "<< allTime/100<<std::endl;
             std::cout<<std::endl<<"Success!"<<std::endl;
+
         }
         else if (action == 2)
         {
-            List list;
-            list.readFromFile("txtToCheck.txt","pushBack");
-            while(list.returnSize()  > 0)
+
+            long long allTime=0;
+            for(int i=0;i<100;i++)
             {
+                List list;
+                list.readFromFile("txtToCheck.txt","pushBack");
                 time.startCountingTime();
                 list.pop();
                 time.stopCountingTime();
-                std::cout<<"time : "<< time.elapsedTime()<<std::endl;
+                allTime+=time.elapsedTime();
             }
-            list.showList();
+            std::cout<<"time : "<< allTime/100<<std::endl;
             std::cout<<std::endl<<"Success!"<<std::endl;
         }
         else if (action == 3)
         {
-            List list;
-            time.startCountingTime();
-            list.readFromFile("txtToCheck.txt","pushBack");
-            time.stopCountingTime();
-            std::cout<<"time : "<< time.elapsedTime()<<std::endl;
-            list.showList();
-            std::cout<<std::endl<<"Success!"<<std::endl;
+            long long allTime=0;
+            for(int i=0;i<100;i++) {
+                List list;
+                time.startCountingTime();
+                list.readFromFile("txtToCheck.txt", "pushBack");
+                time.stopCountingTime();
+                allTime += time.elapsedTime();
+            }
+                std::cout<<"time : "<< allTime/100<<std::endl;
+                std::cout<<std::endl<<"Success!"<<std::endl;
         }
         else if (action == 4)
         {
@@ -152,103 +163,118 @@ void TimeTests::TestDynamicArray() {
             return;
         else if (action == 1)
         {
-            DynamicArray array;
-            time.startCountingTime();
-            array.readFromFile("txtToCheck.txt","push");
-            time.stopCountingTime();
-            std::cout<<"time : "<< time.elapsedTime()<<std::endl;
-            array.arrayDisplay();
+            long long allTime=0;
+            for(int i=0;i<100;i++)
+            {
+                DynamicArray array;
+                array.readFromFile("txtToCheck.txt","push");
+                time.startCountingTime();
+                array.pushFront(1);
+                time.stopCountingTime();
+                allTime+=time.elapsedTime();
+            }
+            std::cout<<"time : "<< allTime/100<<std::endl;
             std::cout<<std::endl<<"Success!"<<std::endl;
 
         }
         else if (action == 2)
         {
-            DynamicArray array;
-            array.readFromFile("txtToCheck.txt","pushBack");
-            while(array.returnSize() != 0)
+            long long allTime=0;
+            for(int i=0;i<100;i++)
             {
+                DynamicArray array;
+                array.readFromFile("txtToCheck.txt","pushBack");
                 time.startCountingTime();
                 array.popBack();
                 time.stopCountingTime();
-                std::cout<<"time : "<< time.elapsedTime()<<std::endl;
+                allTime+=time.elapsedTime();
             }
-            array.arrayDisplay();
+            std::cout<<"time : "<< allTime/100<<std::endl;
             std::cout<<std::endl<<"Success!"<<std::endl;
         }
         else if (action == 3)
         {
-            DynamicArray array;
-            time.startCountingTime();
-            array.readFromFile("txtToCheck.txt","pushBack");
-            time.stopCountingTime();
-            std::cout<<"time : "<< time.elapsedTime()<<std::endl;
-            array.arrayDisplay();
+            long long allTime=0;
+            for(int i=0;i<100;i++)
+            {
+                DynamicArray array;
+                array.readFromFile("txtToCheck.txt", "pushBack");
+                time.startCountingTime();
+                array.pushBack(1);
+                time.stopCountingTime();
+                allTime+=time.elapsedTime();
+            }
+            std::cout<<"time : "<< allTime/100<<std::endl;
             std::cout<<std::endl<<"Success!"<<std::endl;
         }
         else if (action == 4)
         {
-            DynamicArray array;
-            array.readFromFile("txtToCheck.txt","pushBack");
-            while(array.returnSize() > 0)
+            long long allTime=0;
+            for(int i=0;i<100;i++)
             {
+                DynamicArray array;
+                array.readFromFile("txtToCheck.txt","pushBack");
                 time.startCountingTime();
                 array.popBack();
                 time.stopCountingTime();
-                std::cout<<"time : "<< time.elapsedTime()<<std::endl;
+                allTime+=time.elapsedTime();
+
             }
-            array.arrayDisplay();
+            std::cout<<"time : "<< allTime/100<<std::endl;
             std::cout<<std::endl<<"Success!"<<std::endl;
         }
         else if (action == 5)
         {
-            DynamicArray array;
-            int count=0;
-            array.readFromFile("txtToCheck.txt","pushBack");
-            int size=array.returnSize();
-            while(count != size)
+            long long allTime=0;
+            for(int i=0;i<100;i++)
             {
+                DynamicArray array;
+                array.readFromFile("txtToCheck.txt","pushBack");
                 time.startCountingTime();
-                array.pushByIdx(rand()%(array.returnSize()),rand()%1000);
+                array.pushByIdx(array.returnSize()/2,1);
                 time.stopCountingTime();
-                std::cout<<"time : "<< time.elapsedTime()<<std::endl;
-                count++;
+                allTime+=time.elapsedTime();
             }
-            array.arrayDisplay();
+            std::cout<<"time : "<< allTime/100<<std::endl;
             std::cout<<std::endl<<"Success!"<<std::endl;
         }
         else if (action == 6)
         {
-            DynamicArray array;
-            array.readFromFile("txtToCheck.txt","pushBack");
-            while(array.returnSize() != 0 )
-            {
-                int toDelete=rand()%array.returnSize();
+            long long allTime=0;
+            for(int i=0;i<100;i++)
+            {  DynamicArray array;
+                array.readFromFile("txtToCheck.txt","pushBack");
+                int toDelete=array.returnSize()/2;
                 time.startCountingTime();
                 array.popByIdx(toDelete);
                 time.stopCountingTime();
-                std::cout<<"time : "<< time.elapsedTime()<<std::endl;
+                allTime+=time.elapsedTime();
             }
-            array.arrayDisplay();
+            std::cout<<"time : "<< allTime/100<<std::endl;
             std::cout<<std::endl<<"Success!"<<std::endl;
         }
         else if (action == 8)
         {
-            DynamicArray array;
-            array.readFromFile("txtToCheck.txt","pushBack");
-            time.startCountingTime();
-            array.arrayDisplay();
-            time.stopCountingTime();
-            std::cout<<"time : "<< time.elapsedTime()<<std::endl;
-            std::cout<<"Success!"<<std::endl;
+                DynamicArray array;
+                array.readFromFile("txtToCheck.txt", "pushBack");
+                time.startCountingTime();
+                array.arrayDisplay();
+                time.stopCountingTime();
+                std::cout<<"time : "<< time.elapsedTime()<<std::endl;
+            std::cout<<std::endl<<"Success!"<<std::endl;
         }
         else if (action == 7)
         {
-            DynamicArray array;
-            array.readFromFile("txtToCheck.txt","pushBack");
-            time.startCountingTime();
-            array.printByIdx(rand()%array.returnSize());
-            time.stopCountingTime();
-            std::cout<<"time : "<< time.elapsedTime()<<std::endl;
+            long long allTime=0;
+            for(int i=0;i<100;i++) {
+                DynamicArray array;
+                array.readFromFile("txtToCheck.txt", "pushBack");
+                time.startCountingTime();
+                array.printByIdx(rand() % array.returnSize());
+                time.stopCountingTime();
+                allTime+=time.elapsedTime();
+            }
+            std::cout<<"time : "<< allTime/100<<std::endl;
             std::cout<<std::endl<<"Success!"<<std::endl;
         }
         else

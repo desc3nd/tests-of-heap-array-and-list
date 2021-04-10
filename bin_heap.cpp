@@ -66,7 +66,7 @@ void bin_heap::pop() {
     }
     int last= root[size-1];
     int *newRoot=new int [size-1];
-    for (int i = 0; i< size; i++)
+    for (int i = 0; i< size-1; i++)
     {
         newRoot[i]=root[i];
     }
@@ -100,7 +100,7 @@ void bin_heap::fixAfterPop(int last) {
 }
 
 bin_heap::~bin_heap() {
-        if (root != nullptr)
+        if (size !=0)
         delete [] root;
 
 }
@@ -129,5 +129,15 @@ void bin_heap::readFromFile(const std::string &filename)
 
 int bin_heap::returnSize() {
     return size;
+}
+
+int bin_heap::showByIx(int ix)
+{
+    if(ix>size-1 or ix<0)
+    {
+        std::cerr<<"wrong ix -bean_heap::showByIx";
+        return -1;
+    }
+return root[ix];
 }
 

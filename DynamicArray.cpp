@@ -114,7 +114,7 @@ void DynamicArray::popFront() {
 }
 
 DynamicArray::~DynamicArray() {
-    if(head != nullptr)
+    if(size != 0)
     {
         delete [] head;
     }
