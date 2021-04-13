@@ -4,7 +4,7 @@
 
 #include "List.h"
 #include "stopWatch.h"
-#include "dynamicArray.h"
+#include "DynamicArray.h"
 #include "bin_heap.h"
 
 //klasa która tworzy testy czasowe

@@ -65,7 +65,6 @@ void TimeTests::TestList() {
                 time.stopCountingTime();
                 std::cout << "time : " << time.elapsedTime() << std::endl;
             }
-            list.showList();
             std::cout << std::endl << "Success!" << std::endl;
         } else if (action == 5) {
             List list;
@@ -79,7 +78,6 @@ void TimeTests::TestList() {
                 std::cout << "time : " << time.elapsedTime() << std::endl;
                 count++;
             }
-            list.showList();
             std::cout << std::endl << "Success!" << std::endl;
         } else if (action == 6) {
             List list;
@@ -89,7 +87,6 @@ void TimeTests::TestList() {
                 time.startCountingTime();
                 list.popByIdx(toDelete);
                 time.stopCountingTime();
-                list.showList();
                 std::cout << "time : " << time.elapsedTime() << std::endl;
             }
             std::cout << std::endl << "Success!" << std::endl;
@@ -193,7 +190,7 @@ void TimeTests::TestDynamicArray() {
             std::cout << std::endl << "Success!" << std::endl;
         } else if (action == 5) {
             long long allTime = 0;
-            for (int i = 0; i < 101; i++) {
+            for (int i = 0; i < numberOfRepeat; i++) {
                 dynamicArray array;
                 array.readFromFile("txtToCheck.txt", "pushBack");
                 time.startCountingTime();
@@ -262,19 +259,17 @@ void TimeTests::TestBinHeap() {
             heap.readFromFile("txtToCheck.txt");
             time.stopCountingTime();
             std::cout << "time : " << time.elapsedTime() << std::endl;
-            heap.displayHeap();
             std::cout << std::endl << "Success!" << std::endl;
         } else if (action == 2) {
             bin_heap heap;
             heap.readFromFile("txtToCheck.txt");
-            heap.displayHeap();
-            while (heap.returnSize() != 0) {
+
+            while (heap.returnSize() > 0) {
                 time.startCountingTime();
                 heap.pop();
                 time.stopCountingTime();
-                std::cout << "time : " << time.elapsedTime() << std::endl;
             }
-            heap.displayHeap();
+            std::cout << "time : " << time.elapsedTime() << std::endl;
             std::cout << std::endl << "Success!" << std::endl;
         } else if (action == 3) {
             bin_heap heap;
