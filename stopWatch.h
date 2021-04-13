@@ -5,13 +5,15 @@
 
 class stopWatch {
 private:
-    std::chrono::high_resolution_clock::time_point begin;
-    std::chrono::high_resolution_clock::time_point stop;
+    long long int frequency, start, elapsed, stop1;
 public:
-    explicit stopWatch();
     void startCountingTime();
+
     void stopCountingTime();
-    long long elapsedTime();
+
+    long long int elapsedTime();
+
+    long long int read_QPC();
 };
 
 

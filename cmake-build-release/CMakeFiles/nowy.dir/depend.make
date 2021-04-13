@@ -24,16 +24,8 @@ CMakeFiles/nowy.dir/bin_heap.cpp.obj: ../DynamicArray.h
 CMakeFiles/nowy.dir/bin_heap.cpp.obj: ../bin_heap.cpp
 CMakeFiles/nowy.dir/bin_heap.cpp.obj: ../bin_heap.h
 
-CMakeFiles/nowy.dir/main.cpp.obj: ../BstTree.h
-CMakeFiles/nowy.dir/main.cpp.obj: ../DataGenerator.h
-CMakeFiles/nowy.dir/main.cpp.obj: ../DynamicArray.h
-CMakeFiles/nowy.dir/main.cpp.obj: ../List.h
-CMakeFiles/nowy.dir/main.cpp.obj: ../TimeTests.h
-CMakeFiles/nowy.dir/main.cpp.obj: ../bin_heap.h
 CMakeFiles/nowy.dir/main.cpp.obj: ../main.cpp
 CMakeFiles/nowy.dir/main.cpp.obj: ../menu.h
-CMakeFiles/nowy.dir/main.cpp.obj: ../stopWatch.h
-CMakeFiles/nowy.dir/main.cpp.obj: ../structureTests.h
 
 CMakeFiles/nowy.dir/menu.cpp.obj: ../DataGenerator.h
 CMakeFiles/nowy.dir/menu.cpp.obj: ../DynamicArray.h
@@ -42,7 +34,17 @@ CMakeFiles/nowy.dir/menu.cpp.obj: ../TimeTests.h
 CMakeFiles/nowy.dir/menu.cpp.obj: ../bin_heap.h
 CMakeFiles/nowy.dir/menu.cpp.obj: ../menu.cpp
 CMakeFiles/nowy.dir/menu.cpp.obj: ../menu.h
+CMakeFiles/nowy.dir/menu.cpp.obj: ../outcomes.h
 CMakeFiles/nowy.dir/menu.cpp.obj: ../stopWatch.h
+
+CMakeFiles/nowy.dir/outcomes.cpp.obj: ../DataGenerator.h
+CMakeFiles/nowy.dir/outcomes.cpp.obj: ../DynamicArray.h
+CMakeFiles/nowy.dir/outcomes.cpp.obj: ../List.h
+CMakeFiles/nowy.dir/outcomes.cpp.obj: ../TimeTests.h
+CMakeFiles/nowy.dir/outcomes.cpp.obj: ../bin_heap.h
+CMakeFiles/nowy.dir/outcomes.cpp.obj: ../outcomes.cpp
+CMakeFiles/nowy.dir/outcomes.cpp.obj: ../outcomes.h
+CMakeFiles/nowy.dir/outcomes.cpp.obj: ../stopWatch.h
 
 CMakeFiles/nowy.dir/stopWatch.cpp.obj: ../stopWatch.cpp
 CMakeFiles/nowy.dir/stopWatch.cpp.obj: ../stopWatch.h

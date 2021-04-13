@@ -13,22 +13,35 @@ class List {
 private:
     Element *head;
     Element *tail;
-    void display(Element *curr);
+
+    void display(Element *curr) const;
+
     int iter;
-     int size;
+    int size;
 public:
     explicit List();
+
     ~List();
+
     void push(int data);
+
     void pushBack(int data);
-    void showList();
+
+    void showList() const;
+
     void pop();
+
     void popBack();
-    int  returnSize();
+
+    int returnSize() const;
+
     void pushIx(int index, int value);
-    int showIx(int index);
+
+    int showIx(int index) const;
+
     void popByIdx(int index);
-    void readFromFile(const std::string& filename,const std::string& operation);
+
+    void readFromFile(const std::string &filename, const std::string &operation);
 
 };
 

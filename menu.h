@@ -5,7 +5,16 @@
 
 class menu {
 public:
-    void displayMenu();
+    void displayMenu() const;
+
+private:
+    void chooseStructurePrint() const;
+
+    void chooseOperationPrint() const;
+
+    void logicOfChoosingStructure() const;
+
+    void logicOfChoosingOperation() const;
 };
 
 

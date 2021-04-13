@@ -5,96 +5,95 @@
 
 void TimeTests::TestList() {
     int action = 0;
-    stopWatch time;
-
+    stopWatch time{};
+    //dopoki uzytkownik nie wpisze -1
     while (action != -1) {
         operationMenu();
         std::cin >> action;
-
         if (action == -1)
             return;
         else if (action == 1) {
-            List list;
-            time.startCountingTime();
-            list.readFromFile("txtToCheck.txt", "push");
-            time.stopCountingTime();
-            std::cout << std::endl << "time : " << time.elapsedTime() << std::endl;
-            list.showList();
+            long long allTime = 0;
+            //100 razy wykonuje odpowiedią operacje
+            for (int i = 0; i < numberOfRepeat; i++) {
+                List list;
+                //ładuje dane z pliku
+                list.readFromFile("txtToCheck.txt", "push");
+                //włączam stoper
+                time.startCountingTime();
+                //wykonuje operacje
+                list.push(1);
+                //wyłączam stoper
+                time.stopCountingTime();
+                allTime += time.elapsedTime();
+            }
+            //wypisuje średni czas
+            std::cout << "time : " << allTime / 100 << std::endl;
             std::cout << std::endl << "Success!" << std::endl;
-        } else if (action == 2) {
-            List list;
-            int timeSum = 0;
-            list.readFromFile("txtToCheck.txt", "pushBack");
-            while (list.returnSize() > 0) {
+        }
+            //w kolejnych else ifach działam tak samo jak w pierwszym
+        else if (action == 2) {
+
+            long long allTime = 0;
+            for (int i = 0; i < numberOfRepeat; i++) {
+                List list;
+                list.readFromFile("txtToCheck.txt", "pushBack");
                 time.startCountingTime();
                 list.pop();
                 time.stopCountingTime();
-                list.showList();
-                std::cout << std::endl << "time : " << time.elapsedTime() << std::endl;
+                allTime += time.elapsedTime();
             }
-            list.showList();
-            std::cout << "All time: " << timeSum << std::endl;
+            std::cout << "time : " << allTime / 100 << std::endl;
             std::cout << std::endl << "Success!" << std::endl;
         } else if (action == 3) {
-            List list;
-            time.startCountingTime();
-            list.readFromFile("txtToCheck.txt", "pushBack");
-            time.stopCountingTime();
-            std::cout << std::endl << "time : " << time.elapsedTime() << std::endl;
-            list.showList();
+            long long allTime = 0;
+            for (int i = 0; i < numberOfRepeat; i++) {
+                List list;
+                time.startCountingTime();
+                list.readFromFile("txtToCheck.txt", "pushBack");
+                time.stopCountingTime();
+                allTime += time.elapsedTime();
+            }
+            std::cout << "time : " << allTime / 100 << std::endl;
             std::cout << std::endl << "Success!" << std::endl;
         } else if (action == 4) {
             List list;
-            int timeSum = 0;
             list.readFromFile("txtToCheck.txt", "pushBack");
             while (list.returnSize() > 0) {
                 time.startCountingTime();
                 list.popBack();
                 time.stopCountingTime();
-                timeSum += time.elapsedTime();
-                list.showList();
-                std::cout << std::endl << "time : " << time.elapsedTime() << std::endl;
+                std::cout << "time : " << time.elapsedTime() << std::endl;
             }
-
-            std::cout << "All time: " << timeSum << std::endl;
+            list.showList();
             std::cout << std::endl << "Success!" << std::endl;
         } else if (action == 5) {
             List list;
             int count = 0;
-            int timeSum = 0;
             list.readFromFile("txtToCheck.txt", "pushBack");
             int size = list.returnSize();
             while (count != size) {
                 time.startCountingTime();
                 list.pushIx(rand() % (list.returnSize()), rand() % 1000);
                 time.stopCountingTime();
-                timeSum += time.elapsedTime();
-                list.showList();
-                std::cout << std::endl << "time : " << time.elapsedTime() << std::endl;
+                std::cout << "time : " << time.elapsedTime() << std::endl;
                 count++;
             }
             list.showList();
-            std::cout << "All time: " << timeSum << std::endl;
             std::cout << std::endl << "Success!" << std::endl;
-        }
-        else if (action == 6) {
+        } else if (action == 6) {
             List list;
-            int timeSum = 0;
             list.readFromFile("txtToCheck.txt", "pushBack");
             while (list.returnSize() != 0) {
                 int toDelete = rand() % list.returnSize();
                 time.startCountingTime();
                 list.popByIdx(toDelete);
                 time.stopCountingTime();
-                timeSum += time.elapsedTime();
                 list.showList();
-                std::cout << std::endl << "time : " << time.elapsedTime() << std::endl;
+                std::cout << "time : " << time.elapsedTime() << std::endl;
             }
-            list.showList();
-            std::cout << "All time: " << timeSum << std::endl;
             std::cout << std::endl << "Success!" << std::endl;
-        }
-        else if (action == 7) {
+        } else if (action == 7) {
             List list;
             list.readFromFile("txtToCheck.txt", "pushBack");
             time.startCountingTime();
@@ -116,11 +115,8 @@ void TimeTests::TestList() {
 
 }
 
-TimeTests::TimeTests() {
-
-}
-
-void TimeTests::operationMenu() {
+//funkcja drukująca
+void TimeTests::operationMenu() const {
     std::cout << "Choose what operation you want to test: " << std::endl;
     std::cout << "1.Push" << std::endl;
     std::cout << "2.Pop" << std::endl;
@@ -134,95 +130,111 @@ void TimeTests::operationMenu() {
 
 }
 
+//wykonuje te same czynności co dla listy
 void TimeTests::TestDynamicArray() {
     int action = 0;
-    stopWatch time;
+    stopWatch time{};
     while (action != -1) {
         operationMenu();
         std::cin >> action;
-
-        if (action == -1)
+        if (!std::cin) {
+            break;
+        } else if (action == -1)
             return;
         else if (action == 1) {
-            DynamicArray array;
-            time.startCountingTime();
-            array.readFromFile("txtToCheck.txt", "push");
-            time.stopCountingTime();
-            std::cout << "time : " << time.elapsedTime() << std::endl;
-            array.arrayDisplay();
+            long long allTime = 0;
+            for (int i = 0; i < numberOfRepeat; i++) {
+                dynamicArray array;
+                array.readFromFile("txtToCheck.txt", "push");
+                time.startCountingTime();
+                array.pushFront(1);
+                time.stopCountingTime();
+                allTime += time.elapsedTime();
+            }
+            std::cout << "time : " << allTime / 100 << std::endl;
             std::cout << std::endl << "Success!" << std::endl;
 
         } else if (action == 2) {
-            DynamicArray array;
-            array.readFromFile("txtToCheck.txt", "pushBack");
-            while (array.returnSize() != 0) {
+            long long allTime = 0;
+            for (int i = 0; i < numberOfRepeat; i++) {
+                dynamicArray array;
+                array.readFromFile("txtToCheck.txt", "pushBack");
                 time.startCountingTime();
                 array.popBack();
                 time.stopCountingTime();
-                std::cout << "time : " << time.elapsedTime() << std::endl;
+                allTime += time.elapsedTime();
             }
-            array.arrayDisplay();
+            std::cout << "time : " << allTime / 100 << std::endl;
             std::cout << std::endl << "Success!" << std::endl;
         } else if (action == 3) {
-            DynamicArray array;
-            time.startCountingTime();
-            array.readFromFile("txtToCheck.txt", "pushBack");
-            time.stopCountingTime();
-            std::cout << "time : " << time.elapsedTime() << std::endl;
-            array.arrayDisplay();
+            long long allTime = 0;
+            for (int i = 0; i < numberOfRepeat; i++) {
+                dynamicArray array;
+                array.readFromFile("txtToCheck.txt", "pushBack");
+                time.startCountingTime();
+                array.pushBack(1);
+                time.stopCountingTime();
+                allTime += time.elapsedTime();
+            }
+            std::cout << "time : " << allTime / 100 << std::endl;
             std::cout << std::endl << "Success!" << std::endl;
         } else if (action == 4) {
-            DynamicArray array;
-            array.readFromFile("txtToCheck.txt", "pushBack");
-            while (array.returnSize() > 0) {
+            long long allTime = 0;
+            for (int i = 0; i < numberOfRepeat; i++) {
+                dynamicArray array;
+                array.readFromFile("txtToCheck.txt", "pushBack");
                 time.startCountingTime();
                 array.popBack();
                 time.stopCountingTime();
-                std::cout << "time : " << time.elapsedTime() << std::endl;
+                allTime += time.elapsedTime();
+
             }
-            array.arrayDisplay();
+            std::cout << "time : " << allTime / 100 << std::endl;
             std::cout << std::endl << "Success!" << std::endl;
         } else if (action == 5) {
-            DynamicArray array;
-            int count = 0;
-            array.readFromFile("txtToCheck.txt", "pushBack");
-            int size = array.returnSize();
-            while (count != size) {
+            long long allTime = 0;
+            for (int i = 0; i < 101; i++) {
+                dynamicArray array;
+                array.readFromFile("txtToCheck.txt", "pushBack");
                 time.startCountingTime();
-                array.pushByIdx(rand() % (array.returnSize()), rand() % 1000);
+                array.pushByIdx(array.returnSize() / 2, 1);
                 time.stopCountingTime();
-                std::cout << "time : " << time.elapsedTime() << std::endl;
-                count++;
+                allTime += time.elapsedTime();
             }
-            array.arrayDisplay();
+            std::cout << "time : " << allTime / 100 << std::endl;
             std::cout << std::endl << "Success!" << std::endl;
         } else if (action == 6) {
-            DynamicArray array;
-            array.readFromFile("txtToCheck.txt", "pushBack");
-            while (array.returnSize() != 0) {
-                int toDelete = rand() % array.returnSize();
+            long long allTime = 0;
+            for (int i = 0; i < numberOfRepeat; i++) {
+                dynamicArray array;
+                array.readFromFile("txtToCheck.txt", "pushBack");
+                int toDelete = array.returnSize() / 2;
                 time.startCountingTime();
                 array.popByIdx(toDelete);
                 time.stopCountingTime();
-                std::cout << "time : " << time.elapsedTime() << std::endl;
+                allTime += time.elapsedTime();
             }
-            array.arrayDisplay();
+            std::cout << "time : " << allTime / 100 << std::endl;
             std::cout << std::endl << "Success!" << std::endl;
         } else if (action == 8) {
-            DynamicArray array;
+            dynamicArray array;
             array.readFromFile("txtToCheck.txt", "pushBack");
             time.startCountingTime();
             array.arrayDisplay();
             time.stopCountingTime();
             std::cout << "time : " << time.elapsedTime() << std::endl;
-            std::cout << "Success!" << std::endl;
+            std::cout << std::endl << "Success!" << std::endl;
         } else if (action == 7) {
-            DynamicArray array;
-            array.readFromFile("txtToCheck.txt", "pushBack");
-            time.startCountingTime();
-            array.printByIdx(rand() % array.returnSize());
-            time.stopCountingTime();
-            std::cout << "time : " << time.elapsedTime() << std::endl;
+            long long allTime = 0;
+            for (int i = 0; i < numberOfRepeat; i++) {
+                dynamicArray array;
+                array.readFromFile("txtToCheck.txt", "pushBack");
+                time.startCountingTime();
+                array.printByIdx(rand() % array.returnSize());
+                time.stopCountingTime();
+                allTime += time.elapsedTime();
+            }
+            std::cout << "time : " << allTime / 100 << std::endl;
             std::cout << std::endl << "Success!" << std::endl;
         } else
             std::cout << std::endl << "Wrong action! Type again!" << std::endl;
@@ -231,17 +243,17 @@ void TimeTests::TestDynamicArray() {
 
 }
 
+//wykonuje te same czynności co dla listy i tablicy dynamicznej
 void TimeTests::TestBinHeap() {
-
     int action = 0;
-    stopWatch time;
+    stopWatch time{};
     while (action != -1) {
         std::cout << "Choose what operation you want to test: " << std::endl;
         std::cout << "1.Push" << std::endl;
         std::cout << "2.Pop" << std::endl;
         std::cout << "3.Print Structure:" << std::endl;
         std::cout << "-1.Return to main menu" << std::endl;
-        std::cin >> action;
+        std::cin >> std::oct >> action;
         if (action == -1) {
             return;
         } else if (action == 1) {
@@ -275,4 +287,8 @@ void TimeTests::TestBinHeap() {
         } else
             std::cout << std::endl << "Wrong action! Type again!" << std::endl;
     }
+}
+
+TimeTests::TimeTests() {
+    numberOfRepeat = 101;
 }

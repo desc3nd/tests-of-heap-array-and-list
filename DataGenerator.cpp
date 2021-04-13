@@ -15,4 +15,5 @@ void DataGenerator::genrateToFile(int range1, int range2, int quantity, const st
     }
 
     write.close();
+
 }

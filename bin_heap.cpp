@@ -9,7 +9,7 @@ bin_heap::bin_heap() {
 
 }
 
-void  bin_heap::push(int data) {
+void bin_heap::push(int data) {
     int *newRoot = new int[size + 1];
     for (int i = 0; i < size; i++) {
         newRoot[i] = root[i];
@@ -22,34 +22,32 @@ void  bin_heap::push(int data) {
 
 }
 
-void bin_heap::displayHeap() {
-    std::cout<<"This is your heap: "<<std::endl;
-    for (int i=0; i < size; i++)
-    {
-        std::cout<<root[i]<<" ";
+void bin_heap::displayHeap() const {
+    std::cout << "This is your heap: " << std::endl;
+    for (int i = 0; i < size; i++) {
+        std::cout << root[i] << " ";
     }
-    std::cout<<std::endl;
+    std::cout << std::endl;
 
 }
 
-void bin_heap::test() {
-    std::cout<<"This is your heap: "<<std::endl;
-    for (int i=0; i < size; i++)
-    {
-        std::cout<<&root[i]<<" ";
+void bin_heap::test() const {
+    std::cout << "This is your heap: " << std::endl;
+    for (int i = 0; i < size; i++) {
+        std::cout << &root[i] << " ";
     }
-    std::cout<<std::endl;
+    std::cout << std::endl;
 
 }
 
 void bin_heap::fixHeap() {
-    int son=size;
-    int parent = (son - 1) /2;
-    int temp=0;
-    while(son > 0 && root[parent] < root[son]) {
-        temp=root[parent];
+    int son = size;
+    int parent = (son - 1) / 2;
+    int temp = 0;
+    while (son > 0 && root[parent] < root[son]) {
+        temp = root[parent];
         root[parent] = root[son];
-        root[son]=temp;
+        root[son] = temp;
         son = parent;
         parent = (son - 1) / 2;
     }
@@ -66,24 +64,27 @@ void bin_heap::pop() {
     int *newRoot = new int[size - 1];
     for (int i = 0; i < size; i++) {
         newRoot[i] = root[i];
+        int last = root[size - 1];
+        int *newRoot = new int[size - 1];
+        for (int i = 0; i < size - 1; i++) {
+            newRoot[i] = root[i];
+        }
+        delete[] root;
+        root = newRoot;
+        size--;
+        fixAfterPop(last);
     }
-    delete[] root;
-    root = newRoot;
-    size--;
-    fixAfterPop(last);
 }
 
 void bin_heap::fixAfterPop(int last) {
     int parent = 0;
     int son = 2 * parent + 1;
-    root[parent]=last;
-    while(son < size)
-    {
-        if(son + 1 < size && root[son] < root[son + 1] )
-        {
+    root[parent] = last;
+    while (son < size) {
+        if (son + 1 < size && root[son] < root[son + 1]) {
             son++;
         }
-        if(root[parent] >= root[son])
+        if (root[parent] >= root[son])
         {
             root[parent]=last;
             break;
@@ -100,6 +101,8 @@ bin_heap::~bin_heap() {
     if (size != 0)
         delete[] root;
 
+    if (size != 0)
+        delete[] root;
 }
 
 void bin_heap::readFromFile(const std::string &filename) {
@@ -117,10 +120,16 @@ void bin_heap::readFromFile(const std::string &filename) {
     }
     read.close();
 
-
 }
 
-int bin_heap::returnSize() {
+int bin_heap::returnSize() const {
     return size;
 }
 
+int bin_heap::showByIx(int ix) const {
+    if (ix > size - 1 or ix < 0) {
+        std::cerr << "wrong ix -bean_heap::showByIx";
+        return -1;
+    }
+    return root[ix];
+}

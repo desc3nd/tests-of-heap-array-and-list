@@ -338,6 +338,33 @@ menu.cpp.s:
 	$(MAKE) -f CMakeFiles\nowy.dir\build.make CMakeFiles/nowy.dir/menu.cpp.s
 .PHONY : menu.cpp.s
 
+outcomes.obj: outcomes.cpp.obj
+
+.PHONY : outcomes.obj
+
+# target to build an object file
+outcomes.cpp.obj:
+	$(MAKE) -f CMakeFiles\nowy.dir\build.make CMakeFiles/nowy.dir/outcomes.cpp.obj
+.PHONY : outcomes.cpp.obj
+
+outcomes.i: outcomes.cpp.i
+
+.PHONY : outcomes.i
+
+# target to preprocess a source file
+outcomes.cpp.i:
+	$(MAKE) -f CMakeFiles\nowy.dir\build.make CMakeFiles/nowy.dir/outcomes.cpp.i
+.PHONY : outcomes.cpp.i
+
+outcomes.s: outcomes.cpp.s
+
+.PHONY : outcomes.s
+
+# target to generate assembly for a file
+outcomes.cpp.s:
+	$(MAKE) -f CMakeFiles\nowy.dir\build.make CMakeFiles/nowy.dir/outcomes.cpp.s
+.PHONY : outcomes.cpp.s
+
 stopWatch.obj: stopWatch.cpp.obj
 
 .PHONY : stopWatch.obj
@@ -425,6 +452,9 @@ help:
 	@echo ... menu.obj
 	@echo ... menu.i
 	@echo ... menu.s
+	@echo ... outcomes.obj
+	@echo ... outcomes.i
+	@echo ... outcomes.s
 	@echo ... stopWatch.obj
 	@echo ... stopWatch.i
 	@echo ... stopWatch.s

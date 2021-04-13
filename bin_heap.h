@@ -13,13 +13,15 @@ public:
 
     void push(int data);
 
-    void displayHeap();
+    void displayHeap() const;
+
+    int showByIx(int ix) const;
 
     void pop();
 
     void readFromFile(const std::string &filename);
 
-    int returnSize();
+    int returnSize() const;
 
 private:
     void fixHeap();
@@ -27,7 +29,7 @@ private:
     int *root;
     int size;
 
-    void test();
+    void test() const;
 
     void fixAfterPop(int last);
 

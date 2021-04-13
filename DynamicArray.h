@@ -1,19 +1,17 @@
 
 #ifndef NOWY_DYNAMICARRAY_H
 #define NOWY_DYNAMICARRAY_H
-
-
 #include <string>
 
-class DynamicArray {
+class dynamicArray {
 public:
-    explicit DynamicArray();
+    explicit dynamicArray();
 
-    ~DynamicArray();
+    ~dynamicArray();
 
     void pushBack(int data);
 
-    void arrayDisplay();
+    void arrayDisplay() const;
 
     void pushFront(int data);
 
@@ -25,17 +23,17 @@ public:
 
     void popFront();
 
-    int printByIdx(int idx);
+    int printByIdx(int idx) const;
 
     void readFromFile(const std::string &filename, const std::string &operation);
 
-    int returnSize();
+    int returnSize() const;
 
 private:
     int size;
     int *head;
 
-    void test();
+    void test() const;
 };
 
 

@@ -25,16 +25,8 @@ CMakeFiles/nowy.dir/bin_heap.cpp.obj
  C:/studia 2k19/projekty/tests-of-heap-array-and-list/bin_heap.cpp
  C:/studia 2k19/projekty/tests-of-heap-array-and-list/bin_heap.h
 CMakeFiles/nowy.dir/main.cpp.obj
- C:/studia 2k19/projekty/tests-of-heap-array-and-list/BstTree.h
- C:/studia 2k19/projekty/tests-of-heap-array-and-list/DataGenerator.h
- C:/studia 2k19/projekty/tests-of-heap-array-and-list/DynamicArray.h
- C:/studia 2k19/projekty/tests-of-heap-array-and-list/List.h
- C:/studia 2k19/projekty/tests-of-heap-array-and-list/TimeTests.h
- C:/studia 2k19/projekty/tests-of-heap-array-and-list/bin_heap.h
  C:/studia 2k19/projekty/tests-of-heap-array-and-list/main.cpp
  C:/studia 2k19/projekty/tests-of-heap-array-and-list/menu.h
- C:/studia 2k19/projekty/tests-of-heap-array-and-list/stopWatch.h
- C:/studia 2k19/projekty/tests-of-heap-array-and-list/structureTests.h
 CMakeFiles/nowy.dir/menu.cpp.obj
  C:/studia 2k19/projekty/tests-of-heap-array-and-list/DataGenerator.h
  C:/studia 2k19/projekty/tests-of-heap-array-and-list/DynamicArray.h
@@ -43,6 +35,16 @@ CMakeFiles/nowy.dir/menu.cpp.obj
  C:/studia 2k19/projekty/tests-of-heap-array-and-list/bin_heap.h
  C:/studia 2k19/projekty/tests-of-heap-array-and-list/menu.cpp
  C:/studia 2k19/projekty/tests-of-heap-array-and-list/menu.h
+ C:/studia 2k19/projekty/tests-of-heap-array-and-list/outcomes.h
+ C:/studia 2k19/projekty/tests-of-heap-array-and-list/stopWatch.h
+CMakeFiles/nowy.dir/outcomes.cpp.obj
+ C:/studia 2k19/projekty/tests-of-heap-array-and-list/DataGenerator.h
+ C:/studia 2k19/projekty/tests-of-heap-array-and-list/DynamicArray.h
+ C:/studia 2k19/projekty/tests-of-heap-array-and-list/List.h
+ C:/studia 2k19/projekty/tests-of-heap-array-and-list/TimeTests.h
+ C:/studia 2k19/projekty/tests-of-heap-array-and-list/bin_heap.h
+ C:/studia 2k19/projekty/tests-of-heap-array-and-list/outcomes.cpp
+ C:/studia 2k19/projekty/tests-of-heap-array-and-list/outcomes.h
  C:/studia 2k19/projekty/tests-of-heap-array-and-list/stopWatch.h
 CMakeFiles/nowy.dir/stopWatch.cpp.obj
  C:/studia 2k19/projekty/tests-of-heap-array-and-list/stopWatch.cpp

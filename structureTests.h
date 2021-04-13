@@ -6,10 +6,9 @@
 #define NOWY_STRUCTURETESTS_H
 
 #include "List.h"
-
+//klasa która tworzy testy do poprawności struktury w czasie jej tworzenia. jest to klasa eksperymentalna
 class structureTests {
 public:
-    structureTests();
     void propList();
     void propDynamicArray();
     void propBinHeap();

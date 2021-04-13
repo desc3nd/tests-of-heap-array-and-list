@@ -1,18 +1,16 @@
 
 #include "structureTests.h"
-#include "DynamicArray.h"
+#include "dynamicArray.h"
 #include "bin_heap.h"
 #include <random>
 #include<iostream>
 
 
-structureTests::structureTests() {
-
-}
+//klasa mająca w fazie produkcji sprawdzać poprawność struktur
 
 void structureTests::propList() {
     List list;
-    list.readFromFile("txtToCheck.txt","pushBack");
+    list.readFromFile("txtToCheck.txt", "pushBack");
     for (int i = 0; i < 5; i++) {
         list.pushBack(rand() % 1000);
     }
@@ -20,16 +18,15 @@ void structureTests::propList() {
     //list.popBack();
     list.showIx(1);
     list.pushBack(2);
-    list.pushIx(2,2);
+    list.pushIx(2, 2);
     list.showList();
-    std::cout<<"List is ok!"<<std::endl;
-    }
+    std::cout << "List is ok!" << std::endl;
+}
 
 void structureTests::propDynamicArray() {
-    DynamicArray Array;
+    dynamicArray Array;
     Array.readFromFile("txtToCheck.txt", "push");
-    for (int i = 0; i < 10; i++)
-    {
+    for (int i = 0; i < 10; i++) {
         Array.pushBack(rand() % 1000);
     }
 
@@ -45,13 +42,12 @@ void structureTests::propDynamicArray() {
 void structureTests::propBinHeap() {
     bin_heap heap;
     heap.readFromFile("txtToCheck.txt");
-    for (int i = 0; i < 30; i++)
-    {
+    for (int i = 0; i < 30; i++) {
         heap.push(rand() % 1000);
     }
     heap.pop();
     heap.displayHeap();
-    std::cout<<"heap is ok!"<<std::endl;
+    std::cout << "heap is ok!" << std::endl;
 }
 
 
